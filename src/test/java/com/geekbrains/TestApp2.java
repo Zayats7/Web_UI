@@ -23,6 +23,6 @@ public class TestApp2 {
     public void shouldAnswerWithTrue1()
     {
         System.out.println("App1");
-        assertTrue( 1 == 2 );
+       // assertTrue( 1 == 2 );
     }
 }

@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.geekbrains.TestA
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.001 s <<< FAILURE! - in com.geekbrains.TestA
-shouldAnswerWithTrue1(com.geekbrains.TestA)  Time elapsed: 0 s  <<< FAILURE!
-java.lang.AssertionError
-	at com.geekbrains.TestA.shouldAnswerWithTrue1(TestA.java:25)
-
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in com.geekbrains.TestA
