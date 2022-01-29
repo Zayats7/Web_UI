@@ -1,19 +1,23 @@
 package com.geekbrains.HomeWork;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import javafx.scene.shape.Path;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import javax.print.DocFlavor;
+import java.net.URL;
 import java.time.Duration;
 import java.util.logging.Logger;
 
 public class TestMail {
 
     private static final Logger LOGGER = Logger.getLogger(String.valueOf(TestMail.class));
-    //private static final By WEB_SITE = By.xpath("https://mail.ru/");
+    private static final String URL = ("https://mail.ru/");
     private static final By LOGIN_BOX = By.xpath(".//input[contains(@name, 'login')]");
     private static final By PASSWORD_BOX = By.xpath(".//input[contains(@name, 'password')]");
     private static final String LOGIN = "margleibblan@mail.ru";
@@ -37,7 +41,7 @@ public class TestMail {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         LOGGER.info("Открываем браузер");
-        driver.get("https://mail.ru/"); //TODO убрать локатор из теста
+        driver.get(URL); //TODO убрать локатор из теста
         WebDriverWait webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(5));
 
         LOGGER.info("Находим поле для ввода почты");
