@@ -36,7 +36,7 @@ public class TestMail {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         LOGGER.info("Открываем браузер");
-        driver.get("https://mail.ru/"); //TODO
+        driver.get("https://mail.ru/"); //TODO убрать локатор из теста
         WebDriverWait webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(5));
 
         LOGGER.info("Находим поле для ввода почты");
@@ -48,7 +48,7 @@ public class TestMail {
         driver.findElement(CHECKBOX).click();
         LOGGER.info("Нажимаем на кнопку 'Ввести пароль'");
         driver.findElement(GO_TO_PASSWORD).click();
-        //LOGGER.info("Сравниваем введенный адрес почты и отображаемый"); //TODO
+        //LOGGER.info("Сравниваем введенный адрес почты и отображаемый"); //TODO реализовать проверку валидности почты
         //Assert.assertEquals(LOGIN, CHECK_E_MAIL, "Введенный адрес: " + LOGIN + " и Фактический не совпадают");
         LOGGER.info("Находим поле для ввода пароля");
         driver.findElement(PASSWORD_BOX);
@@ -67,17 +67,21 @@ public class TestMail {
         driver.findElement(WHOM).click();
         LOGGER.info("Ждем видимость леера быстрых адресатов");
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(FAST_MESSAGE_LAYER));
-        LOGGER.info("Кликаем на себя");
+        LOGGER.info("Кликаем на 'Отправить себе'");
         driver.findElement(MYSELF_MESSAGE).click();
         LOGGER.info("В теме вводим сообщение");
         driver.findElement(TOPIC).sendKeys("Test");
-        LOGGER.info("Вводим сообщение в основном поле");
+        LOGGER.info("Вводим сообщение в основном поле для ввода сообщения");
         driver.findElement(TEXT_BOX).sendKeys("Hello world it's test!");
         LOGGER.info("Нажимаем 'Отправить'");
         driver.findElement(SENT_BUTTON).click();
+        //TODO написать проверку на видимость леера подтверждения отправки письма
 
         Thread.sleep(5000);
         driver.quit();
-        LOGGER.info("Тест пройден");
+        LOGGER.info("Письмо отправлено, тест пройден");
     }
 }
+//TODO сдлеать логирование понятным
+//TODO Добавить больше Assert
+//TODO По возможности создать отдельные классы с методами
