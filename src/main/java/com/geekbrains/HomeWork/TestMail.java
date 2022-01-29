@@ -45,7 +45,7 @@ public class TestMail {
         driver.findElement(LOGIN_BOX);
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(LOGIN_VISIBLE));
         LOGGER.info("Вводим почту");
-        driver.findElement(By.name("login")).sendKeys(LOGIN);
+        driver.findElement(LOGIN_VISIBLE).sendKeys(LOGIN);
         LOGGER.info("Выключаем чекбокс 'Запомнить'");
         driver.findElement(CHECKBOX).click();
         LOGGER.info("Нажимаем на кнопку 'Ввести пароль'");
@@ -56,7 +56,7 @@ public class TestMail {
         driver.findElement(PASSWORD_BOX);
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(PASSWORD_VISIBLE));
         LOGGER.info("Вводим пароль");
-        driver.findElement(By.name("password")).sendKeys(PASSWORD);
+        driver.findElement(PASSWORD_VISIBLE).sendKeys(PASSWORD);
         LOGGER.info("Нажимаем на кнопку 'Войти'");
         driver.findElement(GO_TO).click();
 
