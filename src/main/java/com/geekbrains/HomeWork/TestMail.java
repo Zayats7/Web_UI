@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import java.time.Duration;
 import java.util.logging.Logger;
 
@@ -30,7 +31,8 @@ public class TestMail {
     private static final By TOPIC = By.xpath(".//input[contains(@name, 'Subject')]");
     private static final By TEXT_BOX = By.xpath(".//div[contains(@role, 'textbox')]");
     private static final By SENT_BUTTON = By.xpath(".//span[contains(@data-title-shortcut, 'Cmd+Enter')]");
-
+    private static final By LOGIN_VISIBLE = By.name("login");
+    private static final By PASSWORD_VISIBLE = By.name("password");
     @Test
     public void testSentMessage() throws InterruptedException {
         WebDriverManager.chromedriver().setup();
@@ -41,7 +43,7 @@ public class TestMail {
 
         LOGGER.info("Находим поле для ввода почты");
         driver.findElement(LOGIN_BOX);
-        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.name("login")));
+        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(LOGIN_VISIBLE));
         LOGGER.info("Вводим почту");
         driver.findElement(By.name("login")).sendKeys(LOGIN);
         LOGGER.info("Выключаем чекбокс 'Запомнить'");
@@ -52,7 +54,7 @@ public class TestMail {
         //Assert.assertEquals(LOGIN, CHECK_E_MAIL, "Введенный адрес: " + LOGIN + " и Фактический не совпадают");
         LOGGER.info("Находим поле для ввода пароля");
         driver.findElement(PASSWORD_BOX);
-        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.name("password")));
+        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(PASSWORD_VISIBLE));
         LOGGER.info("Вводим пароль");
         driver.findElement(By.name("password")).sendKeys(PASSWORD);
         LOGGER.info("Нажимаем на кнопку 'Войти'");
