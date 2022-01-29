@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.geekbrains.lesson5.DiaryTest" time="21.176" tests="1" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="gopherProxySet" value="false"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="webdriver.chrome.driver" value="/Users/alexei77/.cache/selenium/chromedriver/mac64/97.0.4692.71/chromedriver"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/alexei77/IdeaProjects/Web_UI/target/test-classes:/Users/alexei77/IdeaProjects/Web_UI/target/classes:/Users/alexei77/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.8.2/junit-jupiter-api-5.8.2.jar:/Users/alexei77/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/alexei77/.m2/repository/org/junit/platform/junit-platform-commons/1.8.2/junit-platform-commons-1.8.2.jar:/Users/alexei77/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/alexei77/.m2/repository/org/seleniumhq/selenium/selenium-java/4.1.1/selenium-java-4.1.1.jar:/Users/alexei77/.m2/repository/org/seleniumhq/selenium/selenium-api/4.1.1/selenium-api-4.1.1.jar:/Users/alexei77/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.1.1/selenium-chrome-driver-4.1.1.jar:/Users/alexei77/.m2/repository/com/google/auto/service/auto-service-annotations/1.0.1/auto-service-annotations-1.0.1.jar:/Users/alexei77/.m2/repository/com/google/auto/service/auto-service/1.0.1/auto-service-1.0.1.jar:/Users/alexei77/.m2/repository/com/google/auto/auto-common/1.2/auto-common-1.2.jar:/Users/alexei77/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.1.1/selenium-chromium-driver-4.1.1.jar:/Users/alexei77/.m2/repository/org/seleniumhq/selenium/selenium-json/4.1.1/selenium-json-4.1.1.jar:/Users/alexei77/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.1.1/selenium-devtools-v85-4.1.1.jar:/Users/alexei77/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v94/4.1.1/selenium-devtools-v94-4.1.1.jar:/Users/alexei77/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v95/4.1.1/selenium-devtools-v95-4.1.1.jar:/Users/alexei77/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v96/4.1.1/selenium-devtools-v96-4.1.1.jar:/Users/alexei77/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.1.1/selenium-edge-driver-4.1.1.jar:/Users/alexei77/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.1.1/selenium-firefox-driver-4.1.1.jar:/Users/alexei77/.m2/repository/org/seleniumhq/selenium/selenium-firefox-xpi-driver/4.1.1/selenium-firefox-xpi-driver-4.1.1.jar:/Users/alexei77/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.1.1/selenium-ie-driver-4.1.1.jar:/Users/alexei77/.m2/repository/org/seleniumhq/selenium/selenium-opera-driver/4.1.1/selenium-opera-driver-4.1.1.jar:/Users/alexei77/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.1.1/selenium-remote-driver-4.1.1.jar:/Users/alexei77/.m2/repository/com/beust/jcommander/1.81/jcommander-1.81.jar:/Users/alexei77/.m2/repository/io/netty/netty-buffer/4.1.70.Final/netty-buffer-4.1.70.Final.jar:/Users/alexei77/.m2/repository/io/netty/netty-codec-http/4.1.70.Final/netty-codec-http-4.1.70.Final.jar:/Users/alexei77/.m2/repository/io/netty/netty-codec/4.1.70.Final/netty-codec-4.1.70.Final.jar:/Users/alexei77/.m2/repository/io/netty/netty-handler/4.1.70.Final/netty-handler-4.1.70.Final.jar:/Users/alexei77/.m2/repository/io/netty/netty-common/4.1.70.Final/netty-common-4.1.70.Final.jar:/Users/alexei77/.m2/repository/io/netty/netty-transport-classes-epoll/4.1.70.Final/netty-transport-classes-epoll-4.1.70.Final.jar:/Users/alexei77/.m2/repository/io/netty/netty-transport-classes-kqueue/4.1.70.Final/netty-transport-classes-kqueue-4.1.70.Final.jar:/Users/alexei77/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.70.Final/netty-transport-native-unix-common-4.1.70.Final.jar:/Users/alexei77/.m2/repository/io/netty/netty-transport/4.1.70.Final/netty-transport-4.1.70.Final.jar:/Users/alexei77/.m2/repository/io/netty/netty-resolver/4.1.70.Final/netty-resolver-4.1.70.Final.jar:/Users/alexei77/.m2/repository/io/opentelemetry/opentelemetry-api/1.9.1/opentelemetry-api-1.9.1.jar:/Users/alexei77/.m2/repository/io/opentelemetry/opentelemetry-context/1.9.1/opentelemetry-context-1.9.1.jar:/Users/alexei77/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.9.1/opentelemetry-exporter-logging-1.9.1.jar:/Users/alexei77/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.9.1-alpha/opentelemetry-sdk-metrics-1.9.1-alpha.jar:/Users/alexei77/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.9.1-alpha/opentelemetry-sdk-logs-1.9.1-alpha.jar:/Users/alexei77/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.9.1/opentelemetry-sdk-common-1.9.1.jar:/Users/alexei77/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.9.1/opentelemetry-sdk-extension-autoconfigure-spi-1.9.1.jar:/Users/alexei77/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.9.1-alpha/opentelemetry-sdk-extension-autoconfigure-1.9.1-alpha.jar:/Users/alexei77/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.9.1/opentelemetry-sdk-trace-1.9.1.jar:/Users/alexei77/.m2/repository/io/opentelemetry/opentelemetry-api-metrics/1.9.1-alpha/opentelemetry-api-metrics-1.9.1-alpha.jar:/Users/alexei77/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.9.1/opentelemetry-sdk-1.9.1.jar:/Users/alexei77/.m2/repository/io/opentelemetry/opentelemetry-semconv/1.9.1-alpha/opentelemetry-semconv-1.9.1-alpha.jar:/Users/alexei77/.m2/repository/io/ous/jtoml/2.0.0/jtoml-2.0.0.jar:/Users/alexei77/.m2/repository/net/bytebuddy/byte-buddy/1.12.2/byte-buddy-1.12.2.jar:/Users/alexei77/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/Users/alexei77/.m2/repository/org/asynchttpclient/async-http-client/2.12.3/async-http-client-2.12.3.jar:/Users/alexei77/.m2/repository/org/asynchttpclient/async-http-client-netty-utils/2.12.3/async-http-client-netty-utils-2.12.3.jar:/Users/alexei77/.m2/repository/io/netty/netty-codec-socks/4.1.60.Final/netty-codec-socks-4.1.60.Final.jar:/Users/alexei77/.m2/repository/io/netty/netty-handler-proxy/4.1.60.Final/netty-handler-proxy-4.1.60.Final.jar:/Users/alexei77/.m2/repository/io/netty/netty-transport-native-epoll/4.1.60.Final/netty-transport-native-epoll-4.1.60.Final-linux-x86_64.jar:/Users/alexei77/.m2/repository/io/netty/netty-transport-native-kqueue/4.1.60.Final/netty-transport-native-kqueue-4.1.60.Final-osx-x86_64.jar:/Users/alexei77/.m2/repository/org/reactivestreams/reactive-streams/1.0.3/reactive-streams-1.0.3.jar:/Users/alexei77/.m2/repository/com/typesafe/netty/netty-reactive-streams/2.0.4/netty-reactive-streams-2.0.4.jar:/Users/alexei77/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar:/Users/alexei77/.m2/repository/org/seleniumhq/selenium/selenium-http/4.1.1/selenium-http-4.1.1.jar:/Users/alexei77/.m2/repository/net/jodah/failsafe/2.4.4/failsafe-2.4.4.jar:/Users/alexei77/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.1.1/selenium-safari-driver-4.1.1.jar:/Users/alexei77/.m2/repository/org/seleniumhq/selenium/selenium-support/4.1.1/selenium-support-4.1.1.jar:/Users/alexei77/.m2/repository/io/github/bonigarcia/webdrivermanager/5.0.3/webdrivermanager-5.0.3.jar:/Users/alexei77/.m2/repository/org/slf4j/slf4j-api/1.7.32/slf4j-api-1.7.32.jar:/Users/alexei77/.m2/repository/com/google/code/gson/gson/2.8.8/gson-2.8.8.jar:/Users/alexei77/.m2/repository/org/jsoup/jsoup/1.14.2/jsoup-1.14.2.jar:/Users/alexei77/.m2/repository/com/github/docker-java/docker-java/3.2.12/docker-java-3.2.12.jar:/Users/alexei77/.m2/repository/com/github/docker-java/docker-java-core/3.2.12/docker-java-core-3.2.12.jar:/Users/alexei77/.m2/repository/com/github/docker-java/docker-java-api/3.2.12/docker-java-api-3.2.12.jar:/Users/alexei77/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.10.3/jackson-annotations-2.10.3.jar:/Users/alexei77/.m2/repository/commons-io/commons-io/2.6/commons-io-2.6.jar:/Users/alexei77/.m2/repository/org/apache/commons/commons-compress/1.21/commons-compress-1.21.jar:/Users/alexei77/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/Users/alexei77/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.10.3/jackson-databind-2.10.3.jar:/Users/alexei77/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.10.3/jackson-core-2.10.3.jar:/Users/alexei77/.m2/repository/org/bouncycastle/bcpkix-jdk15on/1.64/bcpkix-jdk15on-1.64.jar:/Users/alexei77/.m2/repository/org/bouncycastle/bcprov-jdk15on/1.64/bcprov-jdk15on-1.64.jar:/Users/alexei77/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.30/jcl-over-slf4j-1.7.30.jar:/Users/alexei77/.m2/repository/com/github/docker-java/docker-java-transport-httpclient5/3.2.12/docker-java-transport-httpclient5-3.2.12.jar:/Users/alexei77/.m2/repository/com/github/docker-java/docker-java-transport/3.2.12/docker-java-transport-3.2.12.jar:/Users/alexei77/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.0.3/httpclient5-5.0.3.jar:/Users/alexei77/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.0.2/httpcore5-5.0.2.jar:/Users/alexei77/.m2/repository/commons-codec/commons-codec/1.13/commons-codec-1.13.jar:/Users/alexei77/.m2/repository/net/java/dev/jna/jna/5.8.0/jna-5.8.0.jar:/Users/alexei77/.m2/repository/com/google/guava/guava/30.1.1-jre/guava-30.1.1-jre.jar:/Users/alexei77/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/Users/alexei77/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/alexei77/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/alexei77/.m2/repository/org/checkerframework/checker-qual/3.8.0/checker-qual-3.8.0.jar:/Users/alexei77/.m2/repository/com/google/errorprone/error_prone_annotations/2.5.1/error_prone_annotations-2.5.1.jar:/Users/alexei77/.m2/repository/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar:/Users/alexei77/.m2/repository/org/brotli/dec/0.1.2/dec-0.1.2.jar:/Users/alexei77/.m2/repository/org/junit/jupiter/junit-jupiter/5.8.2/junit-jupiter-5.8.2.jar:/Users/alexei77/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.8.2/junit-jupiter-engine-5.8.2.jar:/Users/alexei77/.m2/repository/org/junit/platform/junit-platform-engine/1.8.2/junit-platform-engine-1.8.2.jar:/Users/alexei77/.m2/repository/org/assertj/assertj-core/3.22.0/assertj-core-3.22.0.jar:/Users/alexei77/.m2/repository/ch/qos/logback/logback-classic/1.2.10/logback-classic-1.2.10.jar:/Users/alexei77/.m2/repository/ch/qos/logback/logback-core/1.2.10/logback-core-1.2.10.jar:/Users/alexei77/.m2/repository/ru/yandex/qatools/htmlelements/htmlelements-matchers/1.20.0/htmlelements-matchers-1.20.0.jar:/Users/alexei77/.m2/repository/org/hamcrest/hamcrest-all/1.3/hamcrest-all-1.3.jar:/Users/alexei77/.m2/repository/junit/junit/4.12/junit-4.12.jar:/Users/alexei77/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/alexei77/.m2/repository/ru/yandex/qatools/htmlelements/htmlelements-java/1.20.0/htmlelements-java-1.20.0.jar:/Users/alexei77/.m2/repository/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.jar:/Users/alexei77/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.8.2/junit-jupiter-params-5.8.2.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value="Europe/Moscow"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="user.country" value="RU"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_291.jdk/Contents/Home/jre/lib"/>
+    <property name="sun.java.command" value="/Users/alexei77/IdeaProjects/Web_UI/target/surefire/surefirebooter5234209885600548819.jar /Users/alexei77/IdeaProjects/Web_UI/target/surefire 2022-01-29T14-55-45_474-jvmRun1 surefire7038133925797370652tmp surefire_06037091200561877523tmp"/>
+    <property name="http.nonProxyHosts" value="local,,|*.local,,|169.254/16|*.169.254/16"/>
+    <property name="surefire.test.class.path" value="/Users/alexei77/IdeaProjects/Web_UI/target/test-classes:/Users/alexei77/IdeaProjects/Web_UI/target/classes:/Users/alexei77/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.8.2/junit-jupiter-api-5.8.2.jar:/Users/alexei77/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/alexei77/.m2/repository/org/junit/platform/junit-platform-commons/1.8.2/junit-platform-commons-1.8.2.jar:/Users/alexei77/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/alexei77/.m2/repository/org/seleniumhq/selenium/selenium-java/4.1.1/selenium-java-4.1.1.jar:/Users/alexei77/.m2/repository/org/seleniumhq/selenium/selenium-api/4.1.1/selenium-api-4.1.1.jar:/Users/alexei77/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.1.1/selenium-chrome-driver-4.1.1.jar:/Users/alexei77/.m2/repository/com/google/auto/service/auto-service-annotations/1.0.1/auto-service-annotations-1.0.1.jar:/Users/alexei77/.m2/repository/com/google/auto/service/auto-service/1.0.1/auto-service-1.0.1.jar:/Users/alexei77/.m2/repository/com/google/auto/auto-common/1.2/auto-common-1.2.jar:/Users/alexei77/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.1.1/selenium-chromium-driver-4.1.1.jar:/Users/alexei77/.m2/repository/org/seleniumhq/selenium/selenium-json/4.1.1/selenium-json-4.1.1.jar:/Users/alexei77/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.1.1/selenium-devtools-v85-4.1.1.jar:/Users/alexei77/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v94/4.1.1/selenium-devtools-v94-4.1.1.jar:/Users/alexei77/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v95/4.1.1/selenium-devtools-v95-4.1.1.jar:/Users/alexei77/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v96/4.1.1/selenium-devtools-v96-4.1.1.jar:/Users/alexei77/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.1.1/selenium-edge-driver-4.1.1.jar:/Users/alexei77/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.1.1/selenium-firefox-driver-4.1.1.jar:/Users/alexei77/.m2/repository/org/seleniumhq/selenium/selenium-firefox-xpi-driver/4.1.1/selenium-firefox-xpi-driver-4.1.1.jar:/Users/alexei77/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.1.1/selenium-ie-driver-4.1.1.jar:/Users/alexei77/.m2/repository/org/seleniumhq/selenium/selenium-opera-driver/4.1.1/selenium-opera-driver-4.1.1.jar:/Users/alexei77/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.1.1/selenium-remote-driver-4.1.1.jar:/Users/alexei77/.m2/repository/com/beust/jcommander/1.81/jcommander-1.81.jar:/Users/alexei77/.m2/repository/io/netty/netty-buffer/4.1.70.Final/netty-buffer-4.1.70.Final.jar:/Users/alexei77/.m2/repository/io/netty/netty-codec-http/4.1.70.Final/netty-codec-http-4.1.70.Final.jar:/Users/alexei77/.m2/repository/io/netty/netty-codec/4.1.70.Final/netty-codec-4.1.70.Final.jar:/Users/alexei77/.m2/repository/io/netty/netty-handler/4.1.70.Final/netty-handler-4.1.70.Final.jar:/Users/alexei77/.m2/repository/io/netty/netty-common/4.1.70.Final/netty-common-4.1.70.Final.jar:/Users/alexei77/.m2/repository/io/netty/netty-transport-classes-epoll/4.1.70.Final/netty-transport-classes-epoll-4.1.70.Final.jar:/Users/alexei77/.m2/repository/io/netty/netty-transport-classes-kqueue/4.1.70.Final/netty-transport-classes-kqueue-4.1.70.Final.jar:/Users/alexei77/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.70.Final/netty-transport-native-unix-common-4.1.70.Final.jar:/Users/alexei77/.m2/repository/io/netty/netty-transport/4.1.70.Final/netty-transport-4.1.70.Final.jar:/Users/alexei77/.m2/repository/io/netty/netty-resolver/4.1.70.Final/netty-resolver-4.1.70.Final.jar:/Users/alexei77/.m2/repository/io/opentelemetry/opentelemetry-api/1.9.1/opentelemetry-api-1.9.1.jar:/Users/alexei77/.m2/repository/io/opentelemetry/opentelemetry-context/1.9.1/opentelemetry-context-1.9.1.jar:/Users/alexei77/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.9.1/opentelemetry-exporter-logging-1.9.1.jar:/Users/alexei77/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.9.1-alpha/opentelemetry-sdk-metrics-1.9.1-alpha.jar:/Users/alexei77/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.9.1-alpha/opentelemetry-sdk-logs-1.9.1-alpha.jar:/Users/alexei77/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.9.1/opentelemetry-sdk-common-1.9.1.jar:/Users/alexei77/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.9.1/opentelemetry-sdk-extension-autoconfigure-spi-1.9.1.jar:/Users/alexei77/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.9.1-alpha/opentelemetry-sdk-extension-autoconfigure-1.9.1-alpha.jar:/Users/alexei77/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.9.1/opentelemetry-sdk-trace-1.9.1.jar:/Users/alexei77/.m2/repository/io/opentelemetry/opentelemetry-api-metrics/1.9.1-alpha/opentelemetry-api-metrics-1.9.1-alpha.jar:/Users/alexei77/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.9.1/opentelemetry-sdk-1.9.1.jar:/Users/alexei77/.m2/repository/io/opentelemetry/opentelemetry-semconv/1.9.1-alpha/opentelemetry-semconv-1.9.1-alpha.jar:/Users/alexei77/.m2/repository/io/ous/jtoml/2.0.0/jtoml-2.0.0.jar:/Users/alexei77/.m2/repository/net/bytebuddy/byte-buddy/1.12.2/byte-buddy-1.12.2.jar:/Users/alexei77/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/Users/alexei77/.m2/repository/org/asynchttpclient/async-http-client/2.12.3/async-http-client-2.12.3.jar:/Users/alexei77/.m2/repository/org/asynchttpclient/async-http-client-netty-utils/2.12.3/async-http-client-netty-utils-2.12.3.jar:/Users/alexei77/.m2/repository/io/netty/netty-codec-socks/4.1.60.Final/netty-codec-socks-4.1.60.Final.jar:/Users/alexei77/.m2/repository/io/netty/netty-handler-proxy/4.1.60.Final/netty-handler-proxy-4.1.60.Final.jar:/Users/alexei77/.m2/repository/io/netty/netty-transport-native-epoll/4.1.60.Final/netty-transport-native-epoll-4.1.60.Final-linux-x86_64.jar:/Users/alexei77/.m2/repository/io/netty/netty-transport-native-kqueue/4.1.60.Final/netty-transport-native-kqueue-4.1.60.Final-osx-x86_64.jar:/Users/alexei77/.m2/repository/org/reactivestreams/reactive-streams/1.0.3/reactive-streams-1.0.3.jar:/Users/alexei77/.m2/repository/com/typesafe/netty/netty-reactive-streams/2.0.4/netty-reactive-streams-2.0.4.jar:/Users/alexei77/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar:/Users/alexei77/.m2/repository/org/seleniumhq/selenium/selenium-http/4.1.1/selenium-http-4.1.1.jar:/Users/alexei77/.m2/repository/net/jodah/failsafe/2.4.4/failsafe-2.4.4.jar:/Users/alexei77/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.1.1/selenium-safari-driver-4.1.1.jar:/Users/alexei77/.m2/repository/org/seleniumhq/selenium/selenium-support/4.1.1/selenium-support-4.1.1.jar:/Users/alexei77/.m2/repository/io/github/bonigarcia/webdrivermanager/5.0.3/webdrivermanager-5.0.3.jar:/Users/alexei77/.m2/repository/org/slf4j/slf4j-api/1.7.32/slf4j-api-1.7.32.jar:/Users/alexei77/.m2/repository/com/google/code/gson/gson/2.8.8/gson-2.8.8.jar:/Users/alexei77/.m2/repository/org/jsoup/jsoup/1.14.2/jsoup-1.14.2.jar:/Users/alexei77/.m2/repository/com/github/docker-java/docker-java/3.2.12/docker-java-3.2.12.jar:/Users/alexei77/.m2/repository/com/github/docker-java/docker-java-core/3.2.12/docker-java-core-3.2.12.jar:/Users/alexei77/.m2/repository/com/github/docker-java/docker-java-api/3.2.12/docker-java-api-3.2.12.jar:/Users/alexei77/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.10.3/jackson-annotations-2.10.3.jar:/Users/alexei77/.m2/repository/commons-io/commons-io/2.6/commons-io-2.6.jar:/Users/alexei77/.m2/repository/org/apache/commons/commons-compress/1.21/commons-compress-1.21.jar:/Users/alexei77/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/Users/alexei77/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.10.3/jackson-databind-2.10.3.jar:/Users/alexei77/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.10.3/jackson-core-2.10.3.jar:/Users/alexei77/.m2/repository/org/bouncycastle/bcpkix-jdk15on/1.64/bcpkix-jdk15on-1.64.jar:/Users/alexei77/.m2/repository/org/bouncycastle/bcprov-jdk15on/1.64/bcprov-jdk15on-1.64.jar:/Users/alexei77/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.30/jcl-over-slf4j-1.7.30.jar:/Users/alexei77/.m2/repository/com/github/docker-java/docker-java-transport-httpclient5/3.2.12/docker-java-transport-httpclient5-3.2.12.jar:/Users/alexei77/.m2/repository/com/github/docker-java/docker-java-transport/3.2.12/docker-java-transport-3.2.12.jar:/Users/alexei77/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.0.3/httpclient5-5.0.3.jar:/Users/alexei77/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.0.2/httpcore5-5.0.2.jar:/Users/alexei77/.m2/repository/commons-codec/commons-codec/1.13/commons-codec-1.13.jar:/Users/alexei77/.m2/repository/net/java/dev/jna/jna/5.8.0/jna-5.8.0.jar:/Users/alexei77/.m2/repository/com/google/guava/guava/30.1.1-jre/guava-30.1.1-jre.jar:/Users/alexei77/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/Users/alexei77/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/alexei77/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/alexei77/.m2/repository/org/checkerframework/checker-qual/3.8.0/checker-qual-3.8.0.jar:/Users/alexei77/.m2/repository/com/google/errorprone/error_prone_annotations/2.5.1/error_prone_annotations-2.5.1.jar:/Users/alexei77/.m2/repository/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar:/Users/alexei77/.m2/repository/org/brotli/dec/0.1.2/dec-0.1.2.jar:/Users/alexei77/.m2/repository/org/junit/jupiter/junit-jupiter/5.8.2/junit-jupiter-5.8.2.jar:/Users/alexei77/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.8.2/junit-jupiter-engine-5.8.2.jar:/Users/alexei77/.m2/repository/org/junit/platform/junit-platform-engine/1.8.2/junit-platform-engine-1.8.2.jar:/Users/alexei77/.m2/repository/org/assertj/assertj-core/3.22.0/assertj-core-3.22.0.jar:/Users/alexei77/.m2/repository/ch/qos/logback/logback-classic/1.2.10/logback-classic-1.2.10.jar:/Users/alexei77/.m2/repository/ch/qos/logback/logback-core/1.2.10/logback-core-1.2.10.jar:/Users/alexei77/.m2/repository/ru/yandex/qatools/htmlelements/htmlelements-matchers/1.20.0/htmlelements-matchers-1.20.0.jar:/Users/alexei77/.m2/repository/org/hamcrest/hamcrest-all/1.3/hamcrest-all-1.3.jar:/Users/alexei77/.m2/repository/junit/junit/4.12/junit-4.12.jar:/Users/alexei77/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/alexei77/.m2/repository/ru/yandex/qatools/htmlelements/htmlelements-java/1.20.0/htmlelements-java-1.20.0.jar:/Users/alexei77/.m2/repository/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.jar:/Users/alexei77/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.8.2/junit-jupiter-params-5.8.2.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/alexei77"/>
+    <property name="user.language" value="ru"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_291.jdk/Contents/Home/jre"/>
+    <property name="basedir" value="/Users/alexei77/IdeaProjects/Web_UI"/>
+    <property name="file.separator" value="/"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="/Users/alexei77/IdeaProjects/Web_UI/target/surefire/surefirebooter5234209885600548819.jar"/>
+    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_291.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_291.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_291.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_291.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_291.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_291.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_291.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_291.jdk/Contents/Home/jre/classes"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local,,|*.local,,|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="1.8.0_291-b10"/>
+    <property name="user.name" value="alexei77"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="10.16"/>
+    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_291.jdk/Contents/Home/jre/lib/endorsed"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="sun.nio.ch.bugLevel" value=""/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="/Users/alexei77/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/var/folders/rn/z2x6wyrn3dg0kywd28v1qsrw0000gn/T/"/>
+    <property name="idea.version" value="2021.2.1"/>
+    <property name="java.version" value="1.8.0_291"/>
+    <property name="user.dir" value="/Users/alexei77/IdeaProjects/Web_UI"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/Users/alexei77/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.291-b10"/>
+    <property name="java.ext.dirs" value="/Users/alexei77/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_291.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="socksNonProxyHosts" value="local,,|*.local,,|169.254/16|*.169.254/16"/>
+  </properties>
+  <testcase name="diaryCookieTest" classname="com.geekbrains.lesson5.DiaryTest" time="19.682">
+    <system-out><![CDATA[14:55:52.172 [main] DEBUG i.g.b.wdm.cache.ResolutionCache - Removing resolution chrome=97 from cache (expired on Mon Jan 24 20:00:33 MSK 2022)
+14:55:52.187 [main] DEBUG o.a.h.c.h.i.c.InternalHttpClient - ex-00000001: preparing request execution
+14:55:52.191 [main] DEBUG o.a.h.c.h.protocol.RequestAddCookies - Cookie spec selected: strict
+14:55:52.196 [main] DEBUG o.a.h.c.h.protocol.RequestAuthCache - Auth cache not set in the context
+14:55:52.196 [main] DEBUG o.a.h.c.h.impl.classic.ProtocolExec - ex-00000001: target auth state: UNCHALLENGED
+14:55:52.197 [main] DEBUG o.a.h.c.h.impl.classic.ProtocolExec - ex-00000001: proxy auth state: UNCHALLENGED
+14:55:52.197 [main] DEBUG o.a.h.c.h.impl.classic.ConnectExec - ex-00000001: acquiring connection with route {s}->https://raw.githubusercontent.com:443
+14:55:52.197 [main] DEBUG o.a.h.c.h.i.c.InternalHttpClient - ex-00000001: acquiring endpoint (3 MINUTES)
+14:55:52.198 [main] DEBUG o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ex-00000001: endpoint lease request (3 MINUTES) [route: {s}->https://raw.githubusercontent.com:443][total available: 0; route allocated: 0 of 5; total allocated: 0 of 25]
+14:55:52.201 [main] DEBUG o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ex-00000001: endpoint leased [route: {s}->https://raw.githubusercontent.com:443][total available: 0; route allocated: 1 of 5; total allocated: 1 of 25]
+14:55:52.245 [main] DEBUG o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ex-00000001: acquired ep-00000000
+14:55:52.245 [main] DEBUG o.a.h.c.h.i.c.InternalHttpClient - ex-00000001: acquired endpoint ep-00000000
+14:55:52.245 [main] DEBUG o.a.h.c.h.impl.classic.ConnectExec - ex-00000001: opening connection {s}->https://raw.githubusercontent.com:443
+14:55:52.246 [main] DEBUG o.a.h.c.h.i.c.InternalHttpClient - ep-00000000: connecting endpoint (30 SECONDS)
+14:55:52.246 [main] DEBUG o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000000: connecting endpoint to https://raw.githubusercontent.com:443 (30 SECONDS)
+14:55:52.260 [main] DEBUG o.a.h.c.h.i.i.DefaultHttpClientConnectionOperator - http-outgoing-0: connecting to raw.githubusercontent.com/185.199.111.133:443
+14:55:52.260 [main] DEBUG o.a.h.c.h.s.SSLConnectionSocketFactory - Connecting socket to raw.githubusercontent.com/185.199.111.133:443 with timeout 30 SECONDS
+14:55:52.325 [main] DEBUG o.a.h.c.h.s.SSLConnectionSocketFactory - Enabled protocols: [TLSv1.2]
+14:55:52.325 [main] DEBUG o.a.h.c.h.s.SSLConnectionSocketFactory - Enabled cipher suites: [TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_DSS_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
+14:55:52.325 [main] DEBUG o.a.h.c.h.s.SSLConnectionSocketFactory - Starting handshake
+14:55:52.495 [main] DEBUG o.a.h.c.h.s.SSLConnectionSocketFactory - Secure session established
+14:55:52.496 [main] DEBUG o.a.h.c.h.s.SSLConnectionSocketFactory -  negotiated protocol: TLSv1.2
+14:55:52.496 [main] DEBUG o.a.h.c.h.s.SSLConnectionSocketFactory -  negotiated cipher suite: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+14:55:52.496 [main] DEBUG o.a.h.c.h.s.SSLConnectionSocketFactory -  peer principal: CN=www.github.com, O="GitHub, Inc.", L=San Francisco, ST=California, C=US
+14:55:52.497 [main] DEBUG o.a.h.c.h.s.SSLConnectionSocketFactory -  peer alternative names: [www.github.com, *.github.com, github.com, *.github.io, github.io, *.githubusercontent.com, githubusercontent.com]
+14:55:52.498 [main] DEBUG o.a.h.c.h.s.SSLConnectionSocketFactory -  issuer principal: CN=DigiCert SHA2 High Assurance Server CA, OU=www.digicert.com, O=DigiCert Inc, C=US
+14:55:52.499 [main] DEBUG o.a.h.c.h.i.i.DefaultHttpClientConnectionOperator - http-outgoing-0: connection established 192.168.0.208:63763<->185.199.111.133:443
+14:55:52.501 [main] DEBUG o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000000: connected http-outgoing-0
+14:55:52.504 [main] DEBUG o.a.h.c.h.i.c.InternalHttpClient - ep-00000000: endpoint connected
+14:55:52.505 [main] DEBUG o.a.h.c.h.i.classic.MainClientExec - ex-00000001: executing GET /bonigarcia/webdrivermanager/master/src/main/resources/commands.properties HTTP/1.1
+14:55:52.506 [main] DEBUG o.a.h.c.h.i.c.InternalHttpClient - ep-00000000: start execution ex-00000001
+14:55:52.506 [main] DEBUG o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000000: executing exchange ex-00000001 over http-outgoing-0
+14:55:52.507 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-0 >> GET /bonigarcia/webdrivermanager/master/src/main/resources/commands.properties HTTP/1.1
+14:55:52.507 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-0 >> user-agent: Apache-HttpClient/5.0
+14:55:52.507 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-0 >> accept-encoding: gzip, deflate, br
+14:55:52.507 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-0 >> cache-control: max-age=0
+14:55:52.507 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-0 >> connection: keep-alive
+14:55:52.507 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-0 >> Host: raw.githubusercontent.com
+14:55:52.507 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-0 >> "GET /bonigarcia/webdrivermanager/master/src/main/resources/commands.properties HTTP/1.1[\r][\n]"
+14:55:52.507 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-0 >> "user-agent: Apache-HttpClient/5.0[\r][\n]"
+14:55:52.507 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-0 >> "accept-encoding: gzip, deflate, br[\r][\n]"
+14:55:52.507 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-0 >> "cache-control: max-age=0[\r][\n]"
+14:55:52.507 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-0 >> "connection: keep-alive[\r][\n]"
+14:55:52.508 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-0 >> "Host: raw.githubusercontent.com[\r][\n]"
+14:55:52.508 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-0 >> "[\r][\n]"
+14:55:52.546 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+14:55:52.546 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-0 << "Connection: keep-alive[\r][\n]"
+14:55:52.546 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-0 << "Content-Length: 728[\r][\n]"
+14:55:52.546 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-0 << "Cache-Control: max-age=300[\r][\n]"
+14:55:52.546 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-0 << "Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox[\r][\n]"
+14:55:52.546 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-0 << "Content-Type: text/plain; charset=utf-8[\r][\n]"
+14:55:52.546 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-0 << "ETag: W/"f670816d6bfbef80584dadbb549bb9c4ccd5de869d5b63cc2a694a74613014b5"[\r][\n]"
+14:55:52.547 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-0 << "Strict-Transport-Security: max-age=31536000[\r][\n]"
+14:55:52.547 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-0 << "X-Content-Type-Options: nosniff[\r][\n]"
+14:55:52.547 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-0 << "X-Frame-Options: deny[\r][\n]"
+14:55:52.547 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-0 << "X-XSS-Protection: 1; mode=block[\r][\n]"
+14:55:52.547 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-0 << "X-GitHub-Request-Id: E9E2:85DB:1A81AE8:1B8EB56:61F35FF3[\r][\n]"
+14:55:52.547 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-0 << "Content-Encoding: gzip[\r][\n]"
+14:55:52.547 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-0 << "Accept-Ranges: bytes[\r][\n]"
+14:55:52.547 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-0 << "Date: Sat, 29 Jan 2022 11:55:52 GMT[\r][\n]"
+14:55:52.547 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-0 << "Via: 1.1 varnish[\r][\n]"
+14:55:52.547 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-0 << "X-Served-By: cache-hhn4039-HHN[\r][\n]"
+14:55:52.547 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-0 << "X-Cache: HIT[\r][\n]"
+14:55:52.547 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-0 << "X-Cache-Hits: 1[\r][\n]"
+14:55:52.548 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-0 << "X-Timer: S1643457353.630799,VS0,VE0[\r][\n]"
+14:55:52.548 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-0 << "Vary: Authorization,Accept-Encoding,Origin[\r][\n]"
+14:55:52.548 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-0 << "Access-Control-Allow-Origin: *[\r][\n]"
+14:55:52.548 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-0 << "X-Fastly-Request-ID: b350f1f84316aeff5ff5d39b2f70be3f11de0731[\r][\n]"
+14:55:52.548 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-0 << "Expires: Sat, 29 Jan 2022 12:00:52 GMT[\r][\n]"
+14:55:52.548 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-0 << "Source-Age: 267[\r][\n]"
+14:55:52.548 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-0 << "[\r][\n]"
+14:55:52.552 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-0 << HTTP/1.1 200 OK
+14:55:52.552 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-0 << Connection: keep-alive
+14:55:52.552 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-0 << Content-Length: 728
+14:55:52.552 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-0 << Cache-Control: max-age=300
+14:55:52.552 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-0 << Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+14:55:52.552 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-0 << Content-Type: text/plain; charset=utf-8
+14:55:52.552 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-0 << ETag: W/"f670816d6bfbef80584dadbb549bb9c4ccd5de869d5b63cc2a694a74613014b5"
+14:55:52.552 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-0 << Strict-Transport-Security: max-age=31536000
+14:55:52.552 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-0 << X-Content-Type-Options: nosniff
+14:55:52.552 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-0 << X-Frame-Options: deny
+14:55:52.552 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-0 << X-XSS-Protection: 1; mode=block
+14:55:52.553 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-0 << X-GitHub-Request-Id: E9E2:85DB:1A81AE8:1B8EB56:61F35FF3
+14:55:52.553 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-0 << Content-Encoding: gzip
+14:55:52.553 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-0 << Accept-Ranges: bytes
+14:55:52.553 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-0 << Date: Sat, 29 Jan 2022 11:55:52 GMT
+14:55:52.553 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-0 << Via: 1.1 varnish
+14:55:52.553 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-0 << X-Served-By: cache-hhn4039-HHN
+14:55:52.553 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-0 << X-Cache: HIT
+14:55:52.553 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-0 << X-Cache-Hits: 1
+14:55:52.553 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-0 << X-Timer: S1643457353.630799,VS0,VE0
+14:55:52.553 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-0 << Vary: Authorization,Accept-Encoding,Origin
+14:55:52.553 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-0 << Access-Control-Allow-Origin: *
+14:55:52.553 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-0 << X-Fastly-Request-ID: b350f1f84316aeff5ff5d39b2f70be3f11de0731
+14:55:52.553 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-0 << Expires: Sat, 29 Jan 2022 12:00:52 GMT
+14:55:52.553 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-0 << Source-Age: 267
+14:55:52.558 [main] DEBUG o.a.h.c.h.i.classic.MainClientExec - ex-00000001: connection can be kept alive for 3 MINUTES
+14:55:52.570 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-0 << "[0x1f][0xffffff8b][0x8][0x0][0x0][0x0][0x0][0x0][0x0][0x3][0xffffffb5]V]o[0xffffffda]0[0x14]}[0xffffffe7]W\[0xffffff81]*[0xffffffb5][0x12][0x1f][[M[0xffffffd3]$[0x1e]hF[0xffffffbb]i [0x18][0xffffffb4][0xffffffdd]&[0xfffffff9][0xffffffc5]Mn[0xffffff82][0xffffffa5]$Fv([0xffffffed]~[0xfffffffd]l[0xffffffe7]c$u[0x6]k[0xffffffe8][l_[0xffffff9f]s|[0xffffffef]q|;[0xffffffe0][0xfffffff0]([0xffffffa2][0xffffffb1]'[0xffffffc1][0xffffffa3][0x9]}[0xffffffa0][0x12][[0x1d][0xffffffb8]]1[0x9]>[0xb][0x11]\[0x1e]'[0xffffff94][0xffffffc5][0x12][0xffffff92][0xffffff95][0x1e]d[0xffffffa1][0x9][0xffffff87][0x7][0x4]|Bw[0xffffff93][0xffffffa0][0x7],6[0xffffffcb]r[0xffffff85]a[0xffffffa8][0x7]\x(t[0xffffff90][0xffffff87][0x9][0xffffffba][0xffffff89]Y|D![0x19]Wk>[0xffffffa0][0xfffffffa][0xe][0x4]b[0xc][0xf][0xffffff82]o[0xffffffa5]ZP[0xffffff94][0xffffffa7][0xffffffce]J[0xfffffff0][0x8][0xffffffbb]p[0xffffffcd][0x4][0xfffffffa][0xfffffffc][0xffffffa9][0xb][0xffffffb3]5[\n]"
+14:55:52.571 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-0 << "[0xffffffda][0xffffff85][0xffffffb1][0x17][0xffffffa8]Y[0xffffffb3][0xffffffca]6[0xffffffd1][0xffffff99][0xffffffc6][0xfffffff7][0xffffff98][0xffffffef][0xffffffa3][0xffffffc0]8[0x1][0xffffffae]c[0x12][0x16][0x7] [0xffffff9f]e[0xffffff82][0xffffff91][0xffffff84][0xffffffd3][0x1f],[0xfffffff6][0x14]j[0x17]&,[0xffffffde]([0xffffff98])ua[0xffffffb6]<k)[0xffffff8e][0xffffff94][0xffffffa2][0xffffff95][0x1d][0xffffffa3][0xffffffef][0xffffff9a]a[0x7f][0xffffff9b]n[0xffffffe8][0xffffffbf]{?t#[0xffffffaf][0xffffffaf]N[0x5][0x3][0x7][0xffffffb6][0x11]sMJL[0x1a][0xffffffb6]+[0xffffffc5][0x7]1[0xffffff8d]p[0xffffffd8]>[0xffffff99]/f7[0xffffff8b][0xffffffd1][0xfffffff4][0xfffffffa][0xffffffeb]d[0xffffffbc]<[0xfffffffd][0xfffffff9][0xfffffff1][0xffffffc3][0xffffffd9]'2$[0xffffffe4][0xffffff84][0xffffff90][0x1b][0xffffffce][0xffffff83][0x10][0x9]Iy[0x8][0x19][0xffffffad][0xffffffd7]!s[0xffffff95]>[0x1e][0x13][0xffffff92][0xffffffb1])[0xfffffff8]6[0x4][0xffffff98][0xffffffc0]}[0xffffff96][0xffffff90][0xffffffc1]#[\r]7[0xfffffff5][0xffffffa2][0xffffffce][0xf][0x14]5[0xffffff99]9[0xffffffa3][0xffffffc9]h>[0xffffffff]<[0xffffffba][0x1d][0xffffffbd][0xffffffa5][0xffffff9e][0xffffff8b]W$[0xffffffe9]-[0xfffffff5]\[0xe][0x17][0xffffffe3][0x1b][0xfffffff8]~7^[0xfffffffc][0xffffff82]/[0xffffffdf][0xffffff9c];[0xffffffb2][0xffffffe4]~[0xffffffb2][0xffffffa5][0x2]s[0xffffffb6][0xffffff8c][0xffffffec]jr[0xffffff85][0xffffffd4]5x[0xffffffb9][0x17][U[0xffffffd0]P;F[0xfffffffb] 0[{[0xffffffe9]4[0xfffffff4]zu[0x1b]"[0xffffffea][0xffffffea][0xfffffff0][0xffffffc1][0xffffffce]A[0xffffffe4] [0xffffffe5][0xffffffcd][0xffffffcc][0xffffffd6][0xffffffa7][0xffffffeb][0xfffffff5][0xffffffc0]Q[0xffffff97]H[0xffffffb9]U[0xe][0xffffff94][0x17]g[0xffffffcb]r[0xffffffc0].[0xffffffba][0xffffffb2]h[0xffffffe6][0xfffffffe][0xffffff82][0xffffffc8]O[0xffffffc7][0xffffffcd]L[0xffffff9a][0xffffffe7][0x7f][0xffffffca][0x7f][0xffffffb3]0[0xffffffa4]9[0x9]!9[0xfffffffa][0xffffffbe][0xffffffa4][0xffffffbf]Pq[0xffffffa8]+k[0xffffffaf][0xffffffca][0xfffffff1][0xffffffa4]\[0xffffffec][0x18][0xffffffa0]]v@FR%kk[0xf]8[0x1b][0xffffffa1][0xffffffff] [0xfffffff7][0xffffffd5][0xffffffca][0xffffffe6][0xfffffff8][0xffffff85][0x17][0xffffffb2][0x9][0xffffffe8]=[0xffffffbe][0xc][0xffffffb2][0xffffffd6]?c[0xffffffb1]U~[0x17]K[0x15][[0xffffffff][0xffffffda][\n]"
+14:55:52.571 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-0 << "LT[0xffffff83]#[0xfffffffe][0xffffff8b][0xffffffa6][0xffffffcc][0x15]\[0xffffffaa]L[0x10][0xffffffa2]i*[0xffffff97]-[0xffffff92][0xffffff86]n_[0xffffffb2][0xffffffcb][0xffffff9a]^S[0xfffffff4]7[0xffffff94]sQ{[0xfffffff3][0xffffffff][0xffffff92][0x19][0xffffffae][0x7f]^}[0xffffff83]Y[0x14];[0xffffffca]w[0xfffffff6][0xfffffff4][0xffffffbc][0xffffffed][0xffffffe6][0xffffff9b]xk[0xffffffdd][0xb]VSW[[0xfffffff9][0xffffffcb][0x11]P[0xffffffba][0xfffffff8][0xffffffe6][0xffffffb5]+X[0xffffffcc][0xffffffbb][0xfffffff6][0xffffffff]n[0xffffffb0]=[0x2]s[0xffffffc1][0x3]A#I[0xffffff88][0xffffffa1] $[0xffffffa4][0xffffff9b][0xffffffd8]U[0xffffffbb][0xfffffff6][0xffffffa6][0xffffffbb]"[0xffffffa2]I[0xfffffff9][0xffffff8f]&[0xffffffe2][0xffffffd0][0xffffffe7][0xffffffc7][0xffffff96][0xffffff89][0xffffff86][0xffffffd4][0xffffff97][\r][0xffffffce][0x7f](u[0xffffff85][0xffffffbb][0xfffffff0][0xffffffa5][0x19][0xffffffda][0xffffffec][0xffffff98][0xffffffc6]Y[0xfffffffd]h8m6[0xffffff9c]U[0xffffffc1][0xfffffff2][0xffffffd6]H[0xfffffff5]W[0xffffffe5][0x17]NM[0x1c][0xffffffc7][0xffffff84]9|[0xffffff83]7[0xffffffbf][0xffffffa4][0xffffffa5][0xfffffff1][0xfffffffb]slAM[0xffffffda][0xffffffa2]ck[0xffffffa9]o[0xffffff89][\n]"
+14:55:52.571 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-0 << "[0xffffffa6][0xfffffffd][0xffffffdd][0xffffff90]F,[0xffffffec][0xffffff97][0xffffffcf][0xfffffff4][0xffffffb2][0xffffff86]}[0xffffffc7]<u[0xffffff9b][0xffffffce][0xffffff8b]M[0xffffffb5][0xfffffffd][0xffffff93][0xffffff8e][0xffffffb6]:7[0xffffff97]i3[0xffffffaf]cA[0xffffffed][0xffffffc0][0xffffff92][0xfffffffa]T[0xffffffb0][0x2]^[0xffffff9a][0xffffffa1][0x1d]<[\r][0xffffffb5]A[0xffffffa7]+;[0xffffffc0][0x7f][0x0][0xffffffb2]$|[0xffffff88][0x1d][\r][0x0][0x0]"
+14:55:52.572 [main] DEBUG o.a.h.c.h.i.c.InternalHttpClient - ep-00000000: releasing valid endpoint
+14:55:52.572 [main] DEBUG o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000000: releasing endpoint
+14:55:52.572 [main] DEBUG o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000000: connection http-outgoing-0 can be kept alive for 3 MINUTES
+14:55:52.573 [main] DEBUG o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000000: connection released [route: {s}->https://raw.githubusercontent.com:443][total available: 1; route allocated: 1 of 5; total allocated: 1 of 25]
+14:55:52.573 [main] DEBUG i.g.b.wdm.versions.VersionDetector - Detecting chrome version using online commands.properties
+14:55:52.575 [main] DEBUG i.g.bonigarcia.wdm.versions.Shell - Running command on the shell: [/Applications/Google Chrome.app/Contents/MacOS/Google Chrome, --version]
+14:55:53.240 [main] DEBUG i.g.bonigarcia.wdm.versions.Shell - Result: Google Chrome 97.0.4692.99
+14:55:53.241 [main] DEBUG i.g.b.wdm.cache.ResolutionCache - Removing resolution chrome97=97.0.4692.71 from cache (expired on Tue Jan 25 16:54:44 MSK 2022)
+14:55:53.243 [main] DEBUG o.a.h.c.h.i.c.InternalHttpClient - ex-00000002: preparing request execution
+14:55:53.244 [main] DEBUG o.a.h.c.h.protocol.RequestAddCookies - Cookie spec selected: strict
+14:55:53.244 [main] DEBUG o.a.h.c.h.protocol.RequestAuthCache - Auth cache not set in the context
+14:55:53.244 [main] DEBUG o.a.h.c.h.impl.classic.ProtocolExec - ex-00000002: target auth state: UNCHALLENGED
+14:55:53.244 [main] DEBUG o.a.h.c.h.impl.classic.ProtocolExec - ex-00000002: proxy auth state: UNCHALLENGED
+14:55:53.244 [main] DEBUG o.a.h.c.h.impl.classic.ConnectExec - ex-00000002: acquiring connection with route {s}->https://chromedriver.storage.googleapis.com:443
+14:55:53.244 [main] DEBUG o.a.h.c.h.i.c.InternalHttpClient - ex-00000002: acquiring endpoint (3 MINUTES)
+14:55:53.244 [main] DEBUG o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ex-00000002: endpoint lease request (3 MINUTES) [route: {s}->https://chromedriver.storage.googleapis.com:443][total available: 1; route allocated: 0 of 5; total allocated: 1 of 25]
+14:55:53.244 [main] DEBUG o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ex-00000002: endpoint leased [route: {s}->https://chromedriver.storage.googleapis.com:443][total available: 1; route allocated: 1 of 5; total allocated: 2 of 25]
+14:55:53.244 [main] DEBUG o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ex-00000002: acquired ep-00000001
+14:55:53.244 [main] DEBUG o.a.h.c.h.i.c.InternalHttpClient - ex-00000002: acquired endpoint ep-00000001
+14:55:53.244 [main] DEBUG o.a.h.c.h.impl.classic.ConnectExec - ex-00000002: opening connection {s}->https://chromedriver.storage.googleapis.com:443
+14:55:53.244 [main] DEBUG o.a.h.c.h.i.c.InternalHttpClient - ep-00000001: connecting endpoint (30 SECONDS)
+14:55:53.244 [main] DEBUG o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000001: connecting endpoint to https://chromedriver.storage.googleapis.com:443 (30 SECONDS)
+14:55:53.283 [main] DEBUG o.a.h.c.h.i.i.DefaultHttpClientConnectionOperator - http-outgoing-1: connecting to chromedriver.storage.googleapis.com/64.233.165.128:443
+14:55:53.283 [main] DEBUG o.a.h.c.h.s.SSLConnectionSocketFactory - Connecting socket to chromedriver.storage.googleapis.com/64.233.165.128:443 with timeout 30 SECONDS
+14:55:53.293 [main] DEBUG o.a.h.c.h.s.SSLConnectionSocketFactory - Enabled protocols: [TLSv1.2]
+14:55:53.293 [main] DEBUG o.a.h.c.h.s.SSLConnectionSocketFactory - Enabled cipher suites: [TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_DSS_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
+14:55:53.293 [main] DEBUG o.a.h.c.h.s.SSLConnectionSocketFactory - Starting handshake
+14:55:53.326 [main] DEBUG o.a.h.c.h.s.SSLConnectionSocketFactory - Secure session established
+14:55:53.327 [main] DEBUG o.a.h.c.h.s.SSLConnectionSocketFactory -  negotiated protocol: TLSv1.2
+14:55:53.327 [main] DEBUG o.a.h.c.h.s.SSLConnectionSocketFactory -  negotiated cipher suite: TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+14:55:53.327 [main] DEBUG o.a.h.c.h.s.SSLConnectionSocketFactory -  peer principal: CN=*.storage.googleapis.com
+14:55:53.327 [main] DEBUG o.a.h.c.h.s.SSLConnectionSocketFactory -  peer alternative names: [*.storage.googleapis.com, *.googleapis.com, commondatastorage.googleapis.com, *.commondatastorage.googleapis.com, storage.googleapis.com, storage.mtls.googleapis.com, *.appspot.com.storage.googleapis.com, *.content-storage.googleapis.com, *.content-storage-p2.googleapis.com, *.content-storage-upload.googleapis.com, *.content-storage-download.googleapis.com, *.storage-upload.googleapis.com, *.storage-download.googleapis.com]
+14:55:53.327 [main] DEBUG o.a.h.c.h.s.SSLConnectionSocketFactory -  issuer principal: CN=GTS CA 1C3, O=Google Trust Services LLC, C=US
+14:55:53.327 [main] DEBUG o.a.h.c.h.i.i.DefaultHttpClientConnectionOperator - http-outgoing-1: connection established 192.168.0.208:63769<->64.233.165.128:443
+14:55:53.327 [main] DEBUG o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000001: connected http-outgoing-1
+14:55:53.327 [main] DEBUG o.a.h.c.h.i.c.InternalHttpClient - ep-00000001: endpoint connected
+14:55:53.327 [main] DEBUG o.a.h.c.h.i.classic.MainClientExec - ex-00000002: executing GET /LATEST_RELEASE_97 HTTP/1.1
+14:55:53.327 [main] DEBUG o.a.h.c.h.i.c.InternalHttpClient - ep-00000001: start execution ex-00000002
+14:55:53.327 [main] DEBUG o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000001: executing exchange ex-00000002 over http-outgoing-1
+14:55:53.327 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-1 >> GET /LATEST_RELEASE_97 HTTP/1.1
+14:55:53.327 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-1 >> user-agent: Apache-HttpClient/5.0
+14:55:53.327 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-1 >> accept-encoding: gzip, deflate, br
+14:55:53.327 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-1 >> cache-control: max-age=0
+14:55:53.327 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-1 >> connection: keep-alive
+14:55:53.327 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-1 >> Host: chromedriver.storage.googleapis.com
+14:55:53.328 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-1 >> "GET /LATEST_RELEASE_97 HTTP/1.1[\r][\n]"
+14:55:53.328 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-1 >> "user-agent: Apache-HttpClient/5.0[\r][\n]"
+14:55:53.328 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-1 >> "accept-encoding: gzip, deflate, br[\r][\n]"
+14:55:53.328 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-1 >> "cache-control: max-age=0[\r][\n]"
+14:55:53.328 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-1 >> "connection: keep-alive[\r][\n]"
+14:55:53.328 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-1 >> "Host: chromedriver.storage.googleapis.com[\r][\n]"
+14:55:53.328 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-1 >> "[\r][\n]"
+14:55:53.336 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-1 << "HTTP/1.1 200 OK[\r][\n]"
+14:55:53.336 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-1 << "X-GUploader-UploadID: ADPycdvZrRuaqTs7Y1GGQhyQNeYZG5KfogbHTWboPwqTD-eJ2uH1-cqO2s7SBtw0rgNYr3tS03rDJuWtBHQ9FiZZx5w[\r][\n]"
+14:55:53.336 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-1 << "x-goog-generation: 1641361520724763[\r][\n]"
+14:55:53.336 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-1 << "x-goog-metageneration: 1[\r][\n]"
+14:55:53.336 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-1 << "x-goog-stored-content-encoding: identity[\r][\n]"
+14:55:53.336 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-1 << "x-goog-stored-content-length: 12[\r][\n]"
+14:55:53.336 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-1 << "x-goog-hash: crc32c=CF80zQ==[\r][\n]"
+14:55:53.336 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-1 << "x-goog-hash: md5=NayZfH/z34d/UVUp6W3Shg==[\r][\n]"
+14:55:53.336 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-1 << "x-goog-storage-class: STANDARD[\r][\n]"
+14:55:53.336 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-1 << "Accept-Ranges: bytes[\r][\n]"
+14:55:53.336 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-1 << "Content-Length: 12[\r][\n]"
+14:55:53.336 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-1 << "Server: UploadServer[\r][\n]"
+14:55:53.336 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-1 << "Date: Sat, 29 Jan 2022 11:25:59 GMT[\r][\n]"
+14:55:53.336 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-1 << "Expires: Sat, 29 Jan 2022 12:25:59 GMT[\r][\n]"
+14:55:53.336 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-1 << "Cache-Control: public, max-age=3600[\r][\n]"
+14:55:53.336 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-1 << "Age: 1794[\r][\n]"
+14:55:53.336 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-1 << "Last-Modified: Wed, 05 Jan 2022 05:45:20 GMT[\r][\n]"
+14:55:53.336 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-1 << "ETag: "35ac997c7ff3df877f515529e96dd286"[\r][\n]"
+14:55:53.336 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-1 << "Content-Type: text/plain[\r][\n]"
+14:55:53.336 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-1 << "Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"[\r][\n]"
+14:55:53.336 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-1 << "[\r][\n]"
+14:55:53.336 [main] DEBUG org.apache.hc.client5.http.wire - http-outgoing-1 << "97.0.4692.71"
+14:55:53.337 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-1 << HTTP/1.1 200 OK
+14:55:53.337 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-1 << X-GUploader-UploadID: ADPycdvZrRuaqTs7Y1GGQhyQNeYZG5KfogbHTWboPwqTD-eJ2uH1-cqO2s7SBtw0rgNYr3tS03rDJuWtBHQ9FiZZx5w
+14:55:53.337 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-1 << x-goog-generation: 1641361520724763
+14:55:53.337 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-1 << x-goog-metageneration: 1
+14:55:53.337 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-1 << x-goog-stored-content-encoding: identity
+14:55:53.337 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-1 << x-goog-stored-content-length: 12
+14:55:53.337 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-1 << x-goog-hash: crc32c=CF80zQ==
+14:55:53.337 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-1 << x-goog-hash: md5=NayZfH/z34d/UVUp6W3Shg==
+14:55:53.337 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-1 << x-goog-storage-class: STANDARD
+14:55:53.337 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-1 << Accept-Ranges: bytes
+14:55:53.337 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-1 << Content-Length: 12
+14:55:53.337 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-1 << Server: UploadServer
+14:55:53.337 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-1 << Date: Sat, 29 Jan 2022 11:25:59 GMT
+14:55:53.337 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-1 << Expires: Sat, 29 Jan 2022 12:25:59 GMT
+14:55:53.337 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-1 << Cache-Control: public, max-age=3600
+14:55:53.337 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-1 << Age: 1794
+14:55:53.337 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-1 << Last-Modified: Wed, 05 Jan 2022 05:45:20 GMT
+14:55:53.337 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-1 << ETag: "35ac997c7ff3df877f515529e96dd286"
+14:55:53.337 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-1 << Content-Type: text/plain
+14:55:53.337 [main] DEBUG org.apache.hc.client5.http.headers - http-outgoing-1 << Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+14:55:53.337 [main] DEBUG o.a.h.c.h.i.classic.MainClientExec - ex-00000002: connection can be kept alive for 3 MINUTES
+14:55:53.337 [main] DEBUG o.a.h.c.h.i.c.InternalHttpClient - ep-00000001: releasing valid endpoint
+14:55:53.337 [main] DEBUG o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000001: releasing endpoint
+14:55:53.337 [main] DEBUG o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000001: connection http-outgoing-1 can be kept alive for 3 MINUTES
+14:55:53.337 [main] DEBUG o.a.h.c.h.i.i.PoolingHttpClientConnectionManager - ep-00000001: connection released [route: {s}->https://chromedriver.storage.googleapis.com:443][total available: 2; route allocated: 1 of 5; total allocated: 2 of 25]
+14:55:53.337 [main] DEBUG i.g.b.wdm.versions.VersionDetector - Latest version of chromedriver according to https://chromedriver.storage.googleapis.com/LATEST_RELEASE_97 is 97.0.4692.71
+14:55:53.337 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 97.0.4692.71 (resolved driver for Chrome 97)
+14:55:53.339 [main] DEBUG i.g.b.wdm.cache.ResolutionCache - Storing resolution chrome=97 in cache (valid until 15:55:53 29/01/2022 MSK)
+14:55:53.340 [main] DEBUG i.g.b.wdm.cache.ResolutionCache - Storing resolution chrome97=97.0.4692.71 in cache (valid until 14:55:53 30/01/2022 MSK)
+14:55:53.352 [main] DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 97.0.4692.71 found in cache
+14:55:53.353 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/alexei77/.cache/selenium/chromedriver/mac64/97.0.4692.71/chromedriver
+14:55:53.496 [main] DEBUG i.n.u.i.l.InternalLoggerFactory - Using SLF4J as the default logging framework
+14:55:53.501 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.level: simple
+14:55:53.501 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.targetRecords: 4
+14:55:53.506 [main] DEBUG i.n.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@46c670a6
+14:55:53.524 [main] DEBUG i.n.util.internal.PlatformDependent0 - -Dio.netty.noUnsafe: false
+14:55:53.525 [main] DEBUG i.n.util.internal.PlatformDependent0 - Java version: 8
+14:55:53.525 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.theUnsafe: available
+14:55:53.526 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.copyMemory: available
+14:55:53.526 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.Buffer.address: available
+14:55:53.526 [main] DEBUG i.n.util.internal.PlatformDependent0 - direct buffer constructor: available
+14:55:53.527 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.Bits.unaligned: available, true
+14:55:53.527 [main] DEBUG i.n.util.internal.PlatformDependent0 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+14:55:53.527 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.DirectByteBuffer.<init>(long, int): available
+14:55:53.527 [main] DEBUG i.n.util.internal.PlatformDependent - sun.misc.Unsafe: available
+14:55:53.528 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.tmpdir: /var/folders/rn/z2x6wyrn3dg0kywd28v1qsrw0000gn/T (java.io.tmpdir)
+14:55:53.528 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+14:55:53.528 [main] DEBUG i.n.util.internal.PlatformDependent - Platform: MacOS
+14:55:53.529 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.maxDirectMemory: 1908932608 bytes
+14:55:53.529 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+14:55:53.530 [main] DEBUG io.netty.util.internal.CleanerJava6 - java.nio.ByteBuffer.cleaner(): available
+14:55:53.530 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.noPreferDirect: false
+14:55:53.537 [main] DEBUG i.n.util.internal.PlatformDependent - org.jctools-core.MpscChunkedArrayQueue: available
+14:55:53.569 [main] DEBUG i.n.u.i.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+14:55:53.569 [main] DEBUG i.n.u.i.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+14:55:53.590 [main] DEBUG io.netty.handler.ssl.JdkSslContext - Default protocols (JDK): [TLSv1.2] 
+14:55:53.590 [main] DEBUG io.netty.handler.ssl.JdkSslContext - Default cipher suites (JDK): [TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384]
+14:55:53.617 [main] DEBUG i.n.c.MultithreadEventLoopGroup - -Dio.netty.eventLoopThreads: 16
+14:55:53.628 [main] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.noKeySetOptimization: false
+14:55:53.628 [main] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.selectorAutoRebuildThreshold: 512
+14:55:53.656 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numHeapArenas: 16
+14:55:53.656 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numDirectArenas: 16
+14:55:53.656 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.pageSize: 8192
+14:55:53.656 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxOrder: 11
+14:55:53.656 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.chunkSize: 16777216
+14:55:53.656 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.smallCacheSize: 256
+14:55:53.656 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.normalCacheSize: 64
+14:55:53.656 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+14:55:53.656 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimInterval: 8192
+14:55:53.656 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+14:55:53.656 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.useCacheForAllThreads: true
+14:55:53.656 [main] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+14:55:53.666 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.allocator.type: pooled
+14:55:53.666 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.threadLocalDirectBufferSize: 0
+14:55:53.666 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+14:55:59.611 [Forwarding newSession on session null to remote] DEBUG io.netty.channel.DefaultChannelId - -Dio.netty.processId: 45338 (auto-detected)
+14:55:59.615 [Forwarding newSession on session null to remote] DEBUG io.netty.util.NetUtil - -Djava.net.preferIPv4Stack: false
+14:55:59.616 [Forwarding newSession on session null to remote] DEBUG io.netty.util.NetUtil - -Djava.net.preferIPv6Addresses: false
+14:55:59.620 [Forwarding newSession on session null to remote] DEBUG io.netty.util.NetUtilInitializations - Loopback interface: lo0 (lo0, 0:0:0:0:0:0:0:1%lo0)
+14:55:59.621 [Forwarding newSession on session null to remote] DEBUG io.netty.util.NetUtil - Failed to get SOMAXCONN from sysctl and file /proc/sys/net/core/somaxconn. Default: 128
+14:55:59.625 [Forwarding newSession on session null to remote] DEBUG io.netty.channel.DefaultChannelId - -Dio.netty.machineId: ac:de:48:ff:fe:00:11:22 (auto-detected)
+14:55:59.686 [AsyncHttpClient-1-2] DEBUG io.netty.buffer.AbstractByteBuf - -Dio.netty.buffer.checkAccessible: true
+14:55:59.687 [AsyncHttpClient-1-2] DEBUG io.netty.buffer.AbstractByteBuf - -Dio.netty.buffer.checkBounds: true
+14:55:59.687 [AsyncHttpClient-1-2] DEBUG i.n.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@f44de6a
+14:55:59.702 [AsyncHttpClient-1-2] DEBUG o.a.n.channel.NettyConnectListener - Using new Channel '[id: 0x85f8205b, L:/127.0.0.1:63803 - R:localhost/127.0.0.1:53200]' for 'POST' to '/session'
+14:55:59.726 [AsyncHttpClient-1-2] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.maxCapacityPerThread: 4096
+14:55:59.726 [AsyncHttpClient-1-2] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+14:55:59.726 [AsyncHttpClient-1-2] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.linkCapacity: 16
+14:55:59.726 [AsyncHttpClient-1-2] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.ratio: 8
+14:55:59.726 [AsyncHttpClient-1-2] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.delayedQueue.ratio: 8
+14:56:04.831 [AsyncHttpClient-1-2] DEBUG i.n.handler.codec.compression.Brotli - brotli4j not in the classpath; Brotli support will be unavailable.
+14:56:04.838 [AsyncHttpClient-1-2] DEBUG o.a.netty.handler.HttpHandler - 
+
+Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
+POST /session HTTP/1.1
+User-Agent: selenium/4.1.1 (java mac)
+Content-Length: 365
+Content-Type: application/json; charset=utf-8
+host: localhost:53200
+accept: */*
+
+Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+cache-control: no-cache
+content-length: 798
+
+14:56:04.886 [AsyncHttpClient-1-2] DEBUG o.a.netty.channel.ChannelManager - Adding key: http://localhost:53200 for channel [id: 0x85f8205b, L:/127.0.0.1:63803 - R:localhost/127.0.0.1:53200]
+14:56:05.179 [AsyncHttpClient-1-3] DEBUG o.a.n.channel.NettyConnectListener - Using new Channel '[id: 0xedf4f3fc, L:/127.0.0.1:63841 - R:localhost/127.0.0.1:63808]' for 'GET' to '/json/version'
+14:56:05.183 [AsyncHttpClient-1-3] DEBUG o.a.netty.handler.HttpHandler - 
+
+Request DefaultFullHttpRequest(decodeResult: success, version: HTTP/1.1, content: EmptyByteBufBE)
+GET /json/version HTTP/1.1
+User-Agent: selenium/4.1.1 (java mac)
+host: localhost:63808
+accept: */*
+
+Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+content-length: 422
+
+14:56:05.183 [AsyncHttpClient-1-3] DEBUG o.a.netty.channel.ChannelManager - Adding key: http://localhost:63808 for channel [id: 0xedf4f3fc, L:/127.0.0.1:63841 - R:localhost/127.0.0.1:63808]
+14:56:05.197 [main] DEBUG i.n.util.internal.ThreadLocalRandom - -Dio.netty.initialSeedUniquifier: 0x2fba448ea3db0687
+14:56:05.206 [AsyncHttpClient-1-4] DEBUG o.a.n.channel.NettyConnectListener - Using new Channel '[id: 0x1c9d49ce, L:/127.0.0.1:63842 - R:localhost/127.0.0.1:63808]' for 'GET' to '/devtools/browser/3ddc05f8-ee7c-4f9f-a834-97bb08d56426'
+14:56:05.209 [AsyncHttpClient-1-4] DEBUG o.a.netty.handler.WebSocketHandler - 
+
+Request DefaultFullHttpRequest(decodeResult: success, version: HTTP/1.1, content: EmptyByteBufBE)
+GET /devtools/browser/3ddc05f8-ee7c-4f9f-a834-97bb08d56426 HTTP/1.1
+upgrade: websocket
+connection: upgrade
+sec-websocket-key: SkKFMMDRCegdKmyPK7HuZA==
+sec-websocket-version: 13
+origin: http://localhost:63808
+host: localhost:63808
+accept: */*
+user-agent: AHC/2.1
+
+Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
+HTTP/1.1 101 WebSocket Protocol Handshake
+Upgrade: WebSocket
+Connection: Upgrade
+Sec-WebSocket-Accept: /i0SOzOU+Rt19x21pJXiKM3pKb0=
+
+14:56:05.289 [Forwarding get on session 12ac1881265e6175f027778e597a3a24 to remote] DEBUG o.a.netty.request.NettyRequestSender - Using pooled Channel '[id: 0x85f8205b, L:/127.0.0.1:63803 - R:localhost/127.0.0.1:53200]' for 'POST' to 'http://localhost:53200/session/12ac1881265e6175f027778e597a3a24/url'
+14:56:05.289 [Forwarding get on session 12ac1881265e6175f027778e597a3a24 to remote] DEBUG o.a.netty.request.NettyRequestSender - Using open Channel [id: 0x85f8205b, L:/127.0.0.1:63803 - R:localhost/127.0.0.1:53200] for POST '/session/12ac1881265e6175f027778e597a3a24/url'
+14:56:05.646 [AsyncHttpClient-1-1] DEBUG o.a.netty.channel.DefaultChannelPool - Entry count for : http://localhost:63808 : 1
+14:56:06.744 [AsyncHttpClient-1-1] DEBUG o.a.netty.channel.DefaultChannelPool - Entry count for : http://localhost:63808 : 1
+14:56:06.810 [AsyncHttpClient-1-2] DEBUG o.a.netty.handler.HttpHandler - 
+
+Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
+POST /session/12ac1881265e6175f027778e597a3a24/url HTTP/1.1
+User-Agent: selenium/4.1.1 (java mac)
+Content-Length: 41
+Content-Type: application/json; charset=utf-8
+host: localhost:53200
+accept: */*
+
+Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+cache-control: no-cache
+content-length: 14
+
+14:56:06.810 [AsyncHttpClient-1-2] DEBUG o.a.netty.channel.ChannelManager - Adding key: http://localhost:53200 for channel [id: 0x85f8205b, L:/127.0.0.1:63803 - R:localhost/127.0.0.1:53200]
+14:56:06.820 [Forwarding addCookie on session 12ac1881265e6175f027778e597a3a24 to remote] DEBUG o.a.netty.request.NettyRequestSender - Using pooled Channel '[id: 0x85f8205b, L:/127.0.0.1:63803 - R:localhost/127.0.0.1:53200]' for 'POST' to 'http://localhost:53200/session/12ac1881265e6175f027778e597a3a24/cookie'
+14:56:06.820 [Forwarding addCookie on session 12ac1881265e6175f027778e597a3a24 to remote] DEBUG o.a.netty.request.NettyRequestSender - Using open Channel [id: 0x85f8205b, L:/127.0.0.1:63803 - R:localhost/127.0.0.1:53200] for POST '/session/12ac1881265e6175f027778e597a3a24/cookie'
+14:56:07.782 [AsyncHttpClient-1-2] DEBUG o.a.netty.handler.HttpHandler - 
+
+Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
+POST /session/12ac1881265e6175f027778e597a3a24/cookie HTTP/1.1
+User-Agent: selenium/4.1.1 (java mac)
+Content-Length: 333
+Content-Type: application/json; charset=utf-8
+host: localhost:53200
+accept: */*
+
+Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+cache-control: no-cache
+content-length: 14
+
+14:56:07.782 [AsyncHttpClient-1-2] DEBUG o.a.netty.channel.ChannelManager - Adding key: http://localhost:53200 for channel [id: 0x85f8205b, L:/127.0.0.1:63803 - R:localhost/127.0.0.1:53200]
+14:56:07.787 [Forwarding refresh on session 12ac1881265e6175f027778e597a3a24 to remote] DEBUG o.a.netty.request.NettyRequestSender - Using pooled Channel '[id: 0x85f8205b, L:/127.0.0.1:63803 - R:localhost/127.0.0.1:53200]' for 'POST' to 'http://localhost:53200/session/12ac1881265e6175f027778e597a3a24/refresh'
+14:56:07.787 [Forwarding refresh on session 12ac1881265e6175f027778e597a3a24 to remote] DEBUG o.a.netty.request.NettyRequestSender - Using open Channel [id: 0x85f8205b, L:/127.0.0.1:63803 - R:localhost/127.0.0.1:53200] for POST '/session/12ac1881265e6175f027778e597a3a24/refresh'
+14:56:07.796 [AsyncHttpClient-1-2] DEBUG o.a.netty.handler.HttpHandler - 
+
+Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
+POST /session/12ac1881265e6175f027778e597a3a24/refresh HTTP/1.1
+User-Agent: selenium/4.1.1 (java mac)
+Content-Length: 3
+Content-Type: application/json; charset=utf-8
+host: localhost:53200
+accept: */*
+
+Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+cache-control: no-cache
+content-length: 14
+
+14:56:07.797 [AsyncHttpClient-1-2] DEBUG o.a.netty.channel.ChannelManager - Adding key: http://localhost:53200 for channel [id: 0x85f8205b, L:/127.0.0.1:63803 - R:localhost/127.0.0.1:53200]
+14:56:07.842 [AsyncHttpClient-1-1] DEBUG o.a.netty.channel.DefaultChannelPool - Entry count for : http://localhost:63808 : 1
+14:56:07.842 [AsyncHttpClient-1-1] DEBUG o.a.netty.channel.DefaultChannelPool - Entry count for : http://localhost:53200 : 1
+14:56:08.942 [AsyncHttpClient-1-1] DEBUG o.a.netty.channel.DefaultChannelPool - Entry count for : http://localhost:63808 : 1
+14:56:08.944 [AsyncHttpClient-1-1] DEBUG o.a.netty.channel.DefaultChannelPool - Entry count for : http://localhost:53200 : 1
+14:56:10.046 [AsyncHttpClient-1-1] DEBUG o.a.netty.channel.DefaultChannelPool - Entry count for : http://localhost:63808 : 1
+14:56:10.046 [AsyncHttpClient-1-1] DEBUG o.a.netty.channel.DefaultChannelPool - Entry count for : http://localhost:53200 : 1
+14:56:11.145 [AsyncHttpClient-1-1] DEBUG o.a.netty.channel.DefaultChannelPool - Entry count for : http://localhost:63808 : 1
+14:56:11.145 [AsyncHttpClient-1-1] DEBUG o.a.netty.channel.DefaultChannelPool - Entry count for : http://localhost:53200 : 1
+14:56:12.243 [AsyncHttpClient-1-1] DEBUG o.a.netty.channel.DefaultChannelPool - Entry count for : http://localhost:63808 : 1
+14:56:12.243 [AsyncHttpClient-1-1] DEBUG o.a.netty.channel.DefaultChannelPool - Entry count for : http://localhost:53200 : 1
+14:56:12.824 [Driver Command Executor] DEBUG o.a.netty.request.NettyRequestSender - Using pooled Channel '[id: 0x85f8205b, L:/127.0.0.1:63803 - R:localhost/127.0.0.1:53200]' for 'DELETE' to 'http://localhost:53200/session/12ac1881265e6175f027778e597a3a24'
+14:56:12.825 [Driver Command Executor] DEBUG o.a.netty.request.NettyRequestSender - Using open Channel [id: 0x85f8205b, L:/127.0.0.1:63803 - R:localhost/127.0.0.1:53200] for DELETE '/session/12ac1881265e6175f027778e597a3a24'
+14:56:12.854 [AsyncHttpClient-1-4] DEBUG o.a.netty.handler.WebSocketHandler - Channel Closed: [id: 0x1c9d49ce, L:/127.0.0.1:63842 ! R:localhost/127.0.0.1:63808] with attribute NettyResponseFuture{currentRetry=5,
+	isDone=1,
+	isCancelled=0,
+	asyncHandler=org.asynchttpclient.ws.WebSocketUpgradeHandler@7d598782,
+	nettyRequest=org.asynchttpclient.netty.request.NettyRequest@418aa6a4,
+	future=java.util.concurrent.CompletableFuture@31562e57[Completed normally],
+	uri=ws://localhost:63808/devtools/browser/3ddc05f8-ee7c-4f9f-a834-97bb08d56426,
+	keepAlive=true,
+	redirectCount=0,
+	timeoutsHolder=null,
+	inAuth=0,
+	touch=1643457365230}
+14:56:12.857 [AsyncHttpClient-1-4] DEBUG o.a.netty.channel.ChannelManager - Closing Channel [id: 0x1c9d49ce, L:/127.0.0.1:63842 ! R:localhost/127.0.0.1:63808] 
+14:56:12.866 [AsyncHttpClient-1-3] DEBUG o.a.netty.handler.HttpHandler - Channel Closed: [id: 0xedf4f3fc, L:/127.0.0.1:63841 ! R:localhost/127.0.0.1:63808] with attribute DISCARD
+14:56:12.876 [AsyncHttpClient-1-2] DEBUG o.a.netty.handler.HttpHandler - 
+
+Request DefaultFullHttpRequest(decodeResult: success, version: HTTP/1.1, content: EmptyByteBufBE)
+DELETE /session/12ac1881265e6175f027778e597a3a24 HTTP/1.1
+User-Agent: selenium/4.1.1 (java mac)
+Content-Type: application/json; charset=utf-8
+host: localhost:53200
+accept: */*
+
+Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+cache-control: no-cache
+content-length: 14
+
+14:56:12.877 [AsyncHttpClient-1-2] DEBUG o.a.netty.channel.ChannelManager - Adding key: http://localhost:53200 for channel [id: 0x85f8205b, L:/127.0.0.1:63803 - R:localhost/127.0.0.1:53200]
+14:56:12.977 [AsyncHttpClient-1-2] DEBUG o.a.netty.handler.HttpHandler - Channel Closed: [id: 0x85f8205b, L:/127.0.0.1:63803 ! R:localhost/127.0.0.1:53200] with attribute DISCARD
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 97.0.4692.71 (adefa7837d02a07a604c1e6eff0b3a09422ab88d-refs/branch-heads/4692@{#1247}) on port 53200
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+янв 29, 2022 2:56:05 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+янв 29, 2022 2:56:05 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 97, so returning the closest version found: 96
+янв 29, 2022 2:56:05 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+INFO: Found CDP implementation for version 97 of 96
+]]></system-err>
+  </testcase>
+</testsuite>

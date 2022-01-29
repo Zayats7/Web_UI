@@ -30,6 +30,7 @@ public class TestMail {
     private static final By TOPIC = By.xpath(".//input[contains(@name, 'Subject')]");
     private static final By TEXT_BOX = By.xpath(".//div[contains(@role, 'textbox')]");
     private static final By SENT_BUTTON = By.xpath(".//span[contains(@data-title-shortcut, 'Cmd+Enter')]");
+    private static final By LOGIN_VISIBLE = By.name("login");
 
     @Test
     public void testSentMessage() throws InterruptedException {
@@ -41,7 +42,7 @@ public class TestMail {
 
         LOGGER.info("Находим поле для ввода почты");
         driver.findElement(LOGIN_BOX);
-        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.name("login")));
+        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(LOGIN_VISIBLE));
         LOGGER.info("Вводим почту");
         driver.findElement(By.name("login")).sendKeys(LOGIN);
         LOGGER.info("Выключаем чекбокс 'Запомнить'");
