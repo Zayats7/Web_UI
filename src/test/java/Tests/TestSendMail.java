@@ -1,4 +1,4 @@
-package com.geekbrains.HomeWork;
+package Tests;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Test;
@@ -12,9 +12,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.logging.Logger;
 
-public class TestMail {
+public class TestSendMail {
 
-    private static final Logger LOGGER = Logger.getLogger(String.valueOf(TestMail.class));
+    private static final Logger LOGGER = Logger.getLogger(String.valueOf(TestSendMail.class));
     private static final String WEB_SITE = "https://mail.ru/";
     private static final By LOGIN_BOX = By.xpath(".//input[contains(@name, 'login')]");
     private static final By PASSWORD_BOX = By.xpath(".//input[contains(@name, 'password')]");
