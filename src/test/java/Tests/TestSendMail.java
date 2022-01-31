@@ -1,10 +1,11 @@
 package Tests;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.Assert;
 import org.junit.Test;
-import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -34,6 +35,8 @@ public class TestSendMail {
     private static final By SENT_BUTTON = By.xpath(".//span[contains(@data-title-shortcut, 'Cmd+Enter')]");
     private static final By LOGIN_VISIBLE = By.name("login");
     private static final By PASSWORD_VISIBLE = By.name("password");
+    private static final By SEND_MESSAGE_LAYER = By.xpath(".//*[contains(@class, 'layer__link')]");
+
     @Test
     public void testSentMessage() throws InterruptedException {
         WebDriverManager.chromedriver().setup();
@@ -51,9 +54,9 @@ public class TestSendMail {
         driver.findElement(CHECKBOX).click();
         LOGGER.info("Нажимаем на кнопку 'Ввести пароль'");
         driver.findElement(GO_TO_PASSWORD).click();
-        LOGGER.info("Сравниваем введенный адрес почты и отображаемый"); //TODO реализовать проверку валидности почты
-        String emailInfo = driver.findElement(CHECK_E_MAIL).getText();
-        //Assertions.assertTrue(emailInfo.contains(LOGIN));
+//        LOGGER.info("Сравниваем введенный адрес почты и отображаемый"); //TODO реализовать проверку валидности почты
+//        String emailInfo = driver.findElement(CHECK_E_MAIL).getText();
+//        Assertions.assertTrue(emailInfo.contains(LOGIN));
         LOGGER.info("Находим поле для ввода пароля");
         driver.findElement(PASSWORD_BOX);
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(PASSWORD_VISIBLE));
@@ -62,14 +65,15 @@ public class TestSendMail {
         LOGGER.info("Нажимаем на кнопку 'Войти'");
         driver.findElement(GO_TO).click();
 
-        Thread.sleep(5000);
+        LOGGER.warning("Проверяем видимость леера сообщения");
+        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(WRITE_MESSAGE));
         LOGGER.info("Нажимаем на кнопку 'Написать письмо'");
         driver.findElement(WRITE_MESSAGE).click();
-        LOGGER.info("Ждем появления леера письма");
+        LOGGER.warning("Ждем появления леера письма");
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(MESSAGE_LAYER));
         LOGGER.info("Кликаем на поле 'Кому'");
         driver.findElement(WHOM).click();
-        LOGGER.info("Ждем видимость леера быстрых адресатов");
+        LOGGER.warning("Ждем видимость леера быстрых адресатов");
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(FAST_MESSAGE_LAYER));
         LOGGER.info("Кликаем на 'Отправить себе'");
         driver.findElement(MYSELF_MESSAGE).click();
@@ -79,13 +83,14 @@ public class TestSendMail {
         driver.findElement(TEXT_BOX).sendKeys("Hello world it's test!");
         LOGGER.info("Нажимаем 'Отправить'");
         driver.findElement(SENT_BUTTON).click();
-        //TODO написать проверку на видимость леера подтверждения отправки письма
+        LOGGER.warning("Провеверям отображение подтверждения отправки сообщения");
+        WebElement send = webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(SEND_MESSAGE_LAYER));
+        Assert.assertTrue(send.isDisplayed());
 
         Thread.sleep(5000);
         driver.quit();
-        LOGGER.info("Письмо отправлено, тест пройден");
+        LOGGER.warning("Письмо отправлено, тест пройден");
     }
 }
 //TODO сдлеать логирование понятным
-//TODO Добавить больше Assert
 //TODO По возможности создать отдельные классы с методами
