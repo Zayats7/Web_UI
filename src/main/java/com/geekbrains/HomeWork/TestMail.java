@@ -1,28 +1,30 @@
 package com.geekbrains.HomeWork;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import javafx.scene.shape.Path;
 import org.junit.Test;
-import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import javax.print.DocFlavor;
+import java.net.URL;
 import java.time.Duration;
 import java.util.logging.Logger;
 
 public class TestMail {
 
     private static final Logger LOGGER = Logger.getLogger(String.valueOf(TestMail.class));
-    private static final String WEB_SITE = "https://mail.ru/";
+    private static final String URL = ("https://mail.ru/");
     private static final By LOGIN_BOX = By.xpath(".//input[contains(@name, 'login')]");
     private static final By PASSWORD_BOX = By.xpath(".//input[contains(@name, 'password')]");
     private static final String LOGIN = "margleibblan@mail.ru";
     private static final String PASSWORD = "qwedcxzasdfghjkl;'\\";
     private static final By CHECKBOX = By.xpath(".//input[contains(@type, 'checkbox')]");
     private static final By GO_TO_PASSWORD = By.xpath(".//button[contains(@data-testid, 'enter-password')]");
-    private static final By CHECK_E_MAIL = By.xpath(".//*[@id= 'mailbox']//div[@name= 'clb36299772']");
+    //private static final By CHECK_E_MAIL = By.xpath(".//*[@id= 'mailbox']/div[1]/div[2]/text()");
     private static final By GO_TO = By.xpath(".//button[contains(@data-testid, 'login-to-mail')]");
     private static final By WRITE_MESSAGE = By.xpath(".//a[contains(@title, 'Написать письмо')]");
     private static final By MESSAGE_LAYER = By.xpath(".//div[contains(@class, 'compose-app__compose')]");
@@ -33,32 +35,31 @@ public class TestMail {
     private static final By TEXT_BOX = By.xpath(".//div[contains(@role, 'textbox')]");
     private static final By SENT_BUTTON = By.xpath(".//span[contains(@data-title-shortcut, 'Cmd+Enter')]");
     private static final By LOGIN_VISIBLE = By.name("login");
-    private static final By PASSWORD_VISIBLE = By.name("password");
+
     @Test
     public void testSentMessage() throws InterruptedException {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         LOGGER.info("Открываем браузер");
-        driver.get(WEB_SITE);
+        driver.get(URL); //TODO убрать локатор из теста
         WebDriverWait webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(5));
 
         LOGGER.info("Находим поле для ввода почты");
         driver.findElement(LOGIN_BOX);
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(LOGIN_VISIBLE));
         LOGGER.info("Вводим почту");
-        driver.findElement(LOGIN_VISIBLE).sendKeys(LOGIN);
+        driver.findElement(By.name("login")).sendKeys(LOGIN);
         LOGGER.info("Выключаем чекбокс 'Запомнить'");
         driver.findElement(CHECKBOX).click();
         LOGGER.info("Нажимаем на кнопку 'Ввести пароль'");
         driver.findElement(GO_TO_PASSWORD).click();
-        LOGGER.info("Сравниваем введенный адрес почты и отображаемый"); //TODO реализовать проверку валидности почты
-        String emailInfo = driver.findElement(CHECK_E_MAIL).getText();
-        //Assertions.assertTrue(emailInfo.contains(LOGIN));
+        //LOGGER.info("Сравниваем введенный адрес почты и отображаемый"); //TODO реализовать проверку валидности почты
+        //Assert.assertEquals(LOGIN, CHECK_E_MAIL, "Введенный адрес: " + LOGIN + " и Фактический не совпадают");
         LOGGER.info("Находим поле для ввода пароля");
         driver.findElement(PASSWORD_BOX);
-        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(PASSWORD_VISIBLE));
+        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.name("password")));
         LOGGER.info("Вводим пароль");
-        driver.findElement(PASSWORD_VISIBLE).sendKeys(PASSWORD);
+        driver.findElement(By.name("password")).sendKeys(PASSWORD);
         LOGGER.info("Нажимаем на кнопку 'Войти'");
         driver.findElement(GO_TO).click();
 
