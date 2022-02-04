@@ -7,11 +7,9 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-import java.util.logging.Logger;
 
 public class Base {
 
-    private static final Logger LOGGER = Logger.getLogger(String.valueOf(MainPage.class));
     WebDriver driver;
     WebDriverWait webDriverWait;
     Actions actions;

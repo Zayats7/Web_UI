@@ -38,8 +38,8 @@ public class MainPage extends Base {
 
     public void whomLine() {
         LOGGER.info("Кликаем на поле 'Кому'");
+        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(WHOM));
         driver.findElement(WHOM).click();
-        //TODO проверка видимости
     }
 
     public void quickPeople() {
@@ -49,21 +49,25 @@ public class MainPage extends Base {
 
     public void mySelfButton() {
         LOGGER.info("Кликаем на 'Отправить себе'");
+        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(MYSELF_MESSAGE));
         driver.findElement(MYSELF_MESSAGE).click();
     }
 
     public void topic() {
         LOGGER.info("В теме вводим сообщение");
+        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(TOPIC));
         driver.findElement(TOPIC).sendKeys("Test");
     }
 
     public void texBox() {
         LOGGER.info("Вводим сообщение в основном поле для ввода сообщения");
+        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(TEXT_BOX));
         driver.findElement(TEXT_BOX).sendKeys("Hello world it's test!");
     }
 
     public void sendMessageButton() {
         LOGGER.info("Нажимаем 'Отправить'");
+        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(SENT_BUTTON));
         driver.findElement(SENT_BUTTON).click();
     }
 

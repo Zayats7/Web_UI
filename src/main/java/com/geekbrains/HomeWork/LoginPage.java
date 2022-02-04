@@ -34,7 +34,7 @@ public class LoginPage extends Base {
     }
 
     public void start() {
-        //driver = new EventFiringDecorator(new CustomLoggerNew()).decorate(new ChromeDriver());
+        driver = new EventFiringDecorator(new CustomLoggerNew()).decorate(new ChromeDriver());
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         LOGGER.info("Открываем браузер");
@@ -66,8 +66,8 @@ public class LoginPage extends Base {
 
     public void doCheckBox() {
         LOGGER.info("Выключаем чекбокс 'Запомнить'");
+        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(CHECKBOX));
         driver.findElement(CHECKBOX).click();
-        //TODO видимость чекбокса
     }
 
     public void doPassword() {
@@ -82,7 +82,7 @@ public class LoginPage extends Base {
 
     public void goToMainPage() {
         LOGGER.info("Нажимаем на кнопку 'Войти'");
+        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(GO_TO));
         driver.findElement(GO_TO).click();
-        //TODO видимость
     }
 }
