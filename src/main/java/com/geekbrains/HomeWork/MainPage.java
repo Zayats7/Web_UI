@@ -37,8 +37,9 @@ public class MainPage extends Base {
     }
 
     public void whomLine() {
-        LOGGER.info("Кликаем на поле 'Кому'");
+        LOGGER.warning("Проверяем видимость поля адресата");
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(WHOM));
+        LOGGER.info("Кликаем на поле 'Кому'");
         driver.findElement(WHOM).click();
     }
 
@@ -48,26 +49,30 @@ public class MainPage extends Base {
     }
 
     public void mySelfButton() {
-        LOGGER.info("Кликаем на 'Отправить себе'");
+        LOGGER.warning("Прверяем видимость себя в списке адресатов");
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(MYSELF_MESSAGE));
+        LOGGER.info("Кликаем на 'Отправить себе'");
         driver.findElement(MYSELF_MESSAGE).click();
     }
 
     public void topic() {
-        LOGGER.info("В теме вводим сообщение");
+        LOGGER.warning("Проверяем видимость поля темы");
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(TOPIC));
+        LOGGER.info("В теме вводим сообщение");
         driver.findElement(TOPIC).sendKeys("Test");
     }
 
     public void texBox() {
-        LOGGER.info("Вводим сообщение в основном поле для ввода сообщения");
+        LOGGER.warning("Проверяем видимость поля ввода сообщения");
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(TEXT_BOX));
+        LOGGER.info("Вводим сообщение в основном поле для ввода сообщения");
         driver.findElement(TEXT_BOX).sendKeys("Hello world it's test!");
     }
 
     public void sendMessageButton() {
-        LOGGER.info("Нажимаем 'Отправить'");
+        LOGGER.warning("Проверяем видимость кнопки отправки");
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(SENT_BUTTON));
+        LOGGER.info("Нажимаем 'Отправить'");
         driver.findElement(SENT_BUTTON).click();
     }
 

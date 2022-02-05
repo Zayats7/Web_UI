@@ -57,7 +57,7 @@ public class LoginPage extends Base {
     }
 
     public void doLogin() {
-        LOGGER.info("Находим поле для ввода почты");
+        LOGGER.warning("Находим поле для ввода почты");
         driver.findElement(LOGIN_BOX);
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(LOGIN_VISIBLE));
         LOGGER.info("Вводим почту");
@@ -65,15 +65,18 @@ public class LoginPage extends Base {
     }
 
     public void doCheckBox() {
-        LOGGER.info("Выключаем чекбокс 'Запомнить'");
+        LOGGER.warning("Проверяем видимость чекбокса'");
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(CHECKBOX));
+        LOGGER.info("Выключаем чекбокс 'Запомнить'");
         driver.findElement(CHECKBOX).click();
     }
 
     public void doPassword() {
+        LOGGER.warning("Проверяем видимость кнопки для ввода пароля");
+        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(GO_TO_PASSWORD));
         LOGGER.info("Нажимаем на кнопку 'Ввести пароль'");
         driver.findElement(GO_TO_PASSWORD).click();
-        LOGGER.info("Находим поле для ввода пароля");
+        LOGGER.warning("Находим поле для ввода пароля");
         driver.findElement(PASSWORD_BOX);
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(PASSWORD_VISIBLE));
         LOGGER.info("Вводим пароль");
@@ -81,8 +84,10 @@ public class LoginPage extends Base {
     }
 
     public void goToMainPage() {
-        LOGGER.info("Нажимаем на кнопку 'Войти'");
+        LOGGER.warning("Проверяем видимость кнопки входа");
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(GO_TO));
+        LOGGER.info("Нажимаем на кнопку входа");
         driver.findElement(GO_TO).click();
     }
+
 }

@@ -35,29 +35,36 @@ public class TestSendMail {
     public void testSentMessage() {
 
         LoginPage loginPage = new LoginPage(driver);
+        LOGGER.info("Запускаем браузер");
         loginPage.start();
+        LOGGER.info("Логин");
         loginPage.doLogin();
         loginPage.doCheckBox();
 //        LOGGER.info("Сравниваем введенный адрес почты и отображаемый"); //TODO реализовать проверку валидности почты
 //        String emailInfo = driver.findElement(CHECK_E_MAIL).getText();
 //        Assertions.assertTrue(emailInfo.contains(LOGIN));
+        LOGGER.info("Пароль");
         loginPage.doPassword();
+        LOGGER.info("Заходим в почту");
         loginPage.goToMainPage();
 
         MainPage mainPage = new MainPage(driver);
+        LOGGER.info("Написать письмо");
         mainPage.writeMessageButton();
         mainPage.messageLayer();
+        LOGGER.info("Выбираем адресата");
         mainPage.whomLine();
         mainPage.quickPeople();
         mainPage.mySelfButton();
+        LOGGER.info("Заполняем тему и пишем пьсьмо");
         mainPage.topic();
         mainPage.texBox();
+        LOGGER.info("Отправляем письмо");
         mainPage.sendMessageButton();
         Assert.assertTrue(mainPage.sendMessageLayer().isDisplayed());
 
         loginPage.quiet();
         LOGGER.warning("Письмо отправлено, тест пройден");
     }
+
 }
-//TODO сдлеать логирование понятным
-//TODO По возможности создать отдельные классы с методами
