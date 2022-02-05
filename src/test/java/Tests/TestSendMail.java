@@ -40,7 +40,8 @@ public class TestSendMail {
         LOGGER.info("Логин");
         loginPage.doLogin();
         loginPage.doCheckBox();
-//        LOGGER.info("Сравниваем введенный адрес почты и отображаемый"); //TODO реализовать проверку валидности почты
+//        TODO реализовать проверку валидности почты
+//        LOGGER.info("Сравниваем введенный адрес почты и отображаемый");
 //        String emailInfo = driver.findElement(CHECK_E_MAIL).getText();
 //        Assertions.assertTrue(emailInfo.contains(LOGIN));
         LOGGER.info("Пароль");
