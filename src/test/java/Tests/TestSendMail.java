@@ -1,13 +1,19 @@
 package Tests;
 
+import com.geekbrains.HomeWork.CustomLoggerNew;
 import com.geekbrains.HomeWork.LoginPage;
 import com.geekbrains.HomeWork.MainPage;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.events.EventFiringDecorator;
 
 import java.util.logging.Logger;
 
@@ -26,7 +32,19 @@ import java.util.logging.Logger;
 public class TestSendMail {
 
     private static final Logger LOGGER = Logger.getLogger(String.valueOf(TestSendMail.class));
+    private static final String WEB_SITE = "https://mail.ru/";
     WebDriver driver;
+
+    @BeforeAll
+    static void registerDriver() {
+        WebDriverManager.chromedriver().setup();
+    }
+
+    @BeforeEach
+    void initDriver() {
+        driver = new EventFiringDecorator(new CustomLoggerNew()).decorate(new ChromeDriver());
+        driver.get(WEB_SITE);
+    }
 
     @Test
     @Feature("Message")
@@ -36,13 +54,13 @@ public class TestSendMail {
 
         LoginPage loginPage = new LoginPage(driver);
         LOGGER.info("Запускаем браузер");
-        loginPage.start();
+       // loginPage.start();
         LOGGER.info("Логин");
         loginPage.doLogin();
         loginPage.doCheckBox();
 //        TODO реализовать проверку валидности почты
 //        LOGGER.info("Сравниваем введенный адрес почты и отображаемый");
-//        String emailInfo = driver.findElement(CHECK_E_MAIL).getText();
+        //String emailInfo = driver.findElement(CHECK_E_MAIL).getAttribute(CHECK_E_MAIL);
 //        Assertions.assertTrue(emailInfo.contains(LOGIN));
         LOGGER.info("Пароль");
         loginPage.doPassword();

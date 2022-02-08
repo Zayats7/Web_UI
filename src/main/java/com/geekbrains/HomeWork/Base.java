@@ -20,5 +20,4 @@ public class Base {
         actions = new Actions(driver);
         PageFactory.initElements(driver, this);
     }
-
 }

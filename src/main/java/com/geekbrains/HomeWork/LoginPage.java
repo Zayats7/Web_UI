@@ -33,13 +33,13 @@ public class LoginPage extends Base {
         super(driver);
     }
 
-    public void start() {
-        driver = new EventFiringDecorator(new CustomLoggerNew()).decorate(new ChromeDriver());
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        LOGGER.info("Открываем браузер");
-        driver.get(WEB_SITE);
-    }
+//    public void start() {
+//        driver = new EventFiringDecorator(new CustomLoggerNew()).decorate(new ChromeDriver());
+//        WebDriverManager.chromedriver().setup();
+//        driver = new ChromeDriver();
+//        LOGGER.info("Открываем браузер");
+//        driver.get(WEB_SITE);
+//    }
 
     public void quiet() {
 
@@ -89,5 +89,4 @@ public class LoginPage extends Base {
         LOGGER.info("Нажимаем на кнопку входа");
         driver.findElement(GO_TO).click();
     }
-
 }

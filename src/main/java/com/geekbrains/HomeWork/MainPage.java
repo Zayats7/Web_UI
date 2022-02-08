@@ -81,5 +81,4 @@ public class MainPage extends Base {
         return webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(SEND_MESSAGE_LAYER));
 
     }
-
 }
