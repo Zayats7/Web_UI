@@ -1,0 +1,1 @@
+{"uuid":"f2308dc6-cca4-4701-951e-2ee435a747a7","name":"exceptionWhenTryShuffleEmptyBox()","children":["18564a43-0e43-4c0b-b5c5-7952e2465d33"],"befores":[{"name":"initializeBox","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1644479542939,"stop":1644479542941}],"afters":[],"start":1644479537921,"stop":1644479542953}

@@ -1,91 +1,109 @@
 package Tests;
 
+import com.geekbrains.HomeWork.CustomLoggerNew;
+import com.geekbrains.HomeWork.LoginPage;
+import com.geekbrains.HomeWork.MainPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.Test;
-import org.junit.jupiter.api.Assertions;
-import org.openqa.selenium.By;
+import io.qameta.allure.Allure;
+import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
+import org.junit.Assert;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.logging.LogEntries;
+import org.openqa.selenium.logging.LogEntry;
+import org.openqa.selenium.logging.LogType;
+import org.openqa.selenium.support.events.EventFiringDecorator;
 
-import java.time.Duration;
+import java.util.Iterator;
 import java.util.logging.Logger;
 
+/**
+ * Тест проверяет логин и отправку письма самому себе
+ * 1. Залогиниться пользователем
+ * 2. Открыть леер сообщений
+ * 3. Выбрать в адресате себя
+ * 4. Заполнить тему
+ * 5. Заполнить само сообщение
+ * 6. Отправить сообшение
+ * 7. Проверить что сообщение отправлено
+ */
+
+@Story("Проверка отправки сообщения")
 public class TestSendMail {
 
     private static final Logger LOGGER = Logger.getLogger(String.valueOf(TestSendMail.class));
     private static final String WEB_SITE = "https://mail.ru/";
-    private static final By LOGIN_BOX = By.xpath(".//input[contains(@name, 'login')]");
-    private static final By PASSWORD_BOX = By.xpath(".//input[contains(@name, 'password')]");
-    private static final String LOGIN = "margleibblan@mail.ru";
-    private static final String PASSWORD = "qwedcxzasdfghjkl;'\\";
-    private static final By CHECKBOX = By.xpath(".//input[contains(@type, 'checkbox')]");
-    private static final By GO_TO_PASSWORD = By.xpath(".//button[contains(@data-testid, 'enter-password')]");
-    private static final By CHECK_E_MAIL = By.xpath(".//*[@id= 'mailbox']//div[@name= 'clb36299772']");
-    private static final By GO_TO = By.xpath(".//button[contains(@data-testid, 'login-to-mail')]");
-    private static final By WRITE_MESSAGE = By.xpath(".//a[contains(@title, 'Написать письмо')]");
-    private static final By MESSAGE_LAYER = By.xpath(".//div[contains(@class, 'compose-app__compose')]");
-    private static final By WHOM = By.xpath(".//div[contains(@data-type, 'to')]");
-    private static final By FAST_MESSAGE_LAYER = By.xpath(".//div[contains(@class, 'datalist--3ogk- datalist_visible--3Ip9Z datalist_show--2PGmR fadeInUp--2yJ0y')]");
-    private static final By MYSELF_MESSAGE = By.xpath(".//div[contains(@data-test-id, 'letter-to-yourself')]");
-    private static final By TOPIC = By.xpath(".//input[contains(@name, 'Subject')]");
-    private static final By TEXT_BOX = By.xpath(".//div[contains(@role, 'textbox')]");
-    private static final By SENT_BUTTON = By.xpath(".//span[contains(@data-title-shortcut, 'Cmd+Enter')]");
-    private static final By LOGIN_VISIBLE = By.name("login");
-    private static final By PASSWORD_VISIBLE = By.name("password");
-    @Test
-    public void testSentMessage() throws InterruptedException {
+    WebDriver driver;
+
+    @BeforeAll
+    static void registerDriver() {
         WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
-        LOGGER.info("Открываем браузер");
-        driver.get(WEB_SITE);
-        WebDriverWait webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(5));
-
-        LOGGER.info("Находим поле для ввода почты");
-        driver.findElement(LOGIN_BOX);
-        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(LOGIN_VISIBLE));
-        LOGGER.info("Вводим почту");
-        driver.findElement(LOGIN_VISIBLE).sendKeys(LOGIN);
-        LOGGER.info("Выключаем чекбокс 'Запомнить'");
-        driver.findElement(CHECKBOX).click();
-        LOGGER.info("Нажимаем на кнопку 'Ввести пароль'");
-        driver.findElement(GO_TO_PASSWORD).click();
-        LOGGER.info("Сравниваем введенный адрес почты и отображаемый"); //TODO реализовать проверку валидности почты
-        String emailInfo = driver.findElement(CHECK_E_MAIL).getText();
-        //Assertions.assertTrue(emailInfo.contains(LOGIN));
-        LOGGER.info("Находим поле для ввода пароля");
-        driver.findElement(PASSWORD_BOX);
-        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(PASSWORD_VISIBLE));
-        LOGGER.info("Вводим пароль");
-        driver.findElement(PASSWORD_VISIBLE).sendKeys(PASSWORD);
-        LOGGER.info("Нажимаем на кнопку 'Войти'");
-        driver.findElement(GO_TO).click();
-
-        Thread.sleep(5000);
-        LOGGER.info("Нажимаем на кнопку 'Написать письмо'");
-        driver.findElement(WRITE_MESSAGE).click();
-        LOGGER.info("Ждем появления леера письма");
-        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(MESSAGE_LAYER));
-        LOGGER.info("Кликаем на поле 'Кому'");
-        driver.findElement(WHOM).click();
-        LOGGER.info("Ждем видимость леера быстрых адресатов");
-        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(FAST_MESSAGE_LAYER));
-        LOGGER.info("Кликаем на 'Отправить себе'");
-        driver.findElement(MYSELF_MESSAGE).click();
-        LOGGER.info("В теме вводим сообщение");
-        driver.findElement(TOPIC).sendKeys("Test");
-        LOGGER.info("Вводим сообщение в основном поле для ввода сообщения");
-        driver.findElement(TEXT_BOX).sendKeys("Hello world it's test!");
-        LOGGER.info("Нажимаем 'Отправить'");
-        driver.findElement(SENT_BUTTON).click();
-        //TODO написать проверку на видимость леера подтверждения отправки письма
-
-        Thread.sleep(5000);
-        driver.quit();
-        LOGGER.info("Письмо отправлено, тест пройден");
     }
+
+    @BeforeEach
+    void initDriver() {
+        driver = new EventFiringDecorator(new CustomLoggerNew()).decorate(new ChromeDriver());
+        driver.get(WEB_SITE);
+    }
+
+    @Test
+    @Feature("Message")
+    @Feature("Login")
+    @Description("Проверка отправки сообщения после логина")
+    public void testSentMessage() {
+
+        LoginPage loginPage = new LoginPage(driver);
+        LOGGER.info("Запускаем браузер");
+        //loginPage.start();
+        LOGGER.info("Логин");
+        loginPage.doLogin();
+        loginPage.doCheckBox();
+//        TODO реализовать проверку валидности почты
+//        LOGGER.info("Сравниваем введенный адрес почты и отображаемый");
+        //String emailInfo = driver.findElement(CHECK_E_MAIL).getAttribute(CHECK_E_MAIL);
+//        Assertions.assertTrue(emailInfo.contains(LOGIN));
+        LOGGER.info("Пароль");
+        loginPage.doPassword();
+        LOGGER.info("Заходим в почту");
+        loginPage.goToMainPage();
+
+        MainPage mainPage = new MainPage(driver);
+        LOGGER.info("Написать письмо");
+        mainPage.writeMessageButton();
+        mainPage.messageLayer();
+        LOGGER.info("Выбираем адресата");
+        mainPage.whomLine();
+        mainPage.quickPeople();
+        mainPage.mySelfButton();
+        LOGGER.info("Заполняем тему и пишем пьсьмо");
+        mainPage.topic();
+        mainPage.texBox();
+        LOGGER.info("Отправляем письмо");
+        mainPage.sendMessageButton();
+        Assert.assertTrue(mainPage.sendMessageLayer().isDisplayed());
+
+        //loginPage.quiet();
+        LOGGER.warning("Письмо отправлено, тест пройден");
+    }
+    @AfterEach
+    void killDriver() {
+        LogEntries logEntries = driver.manage().logs().get(LogType.BROWSER);
+        Iterator<LogEntry> iterator = logEntries.iterator();
+
+        while (iterator.hasNext()) {
+            Allure.addAttachment("Лог браузера:", iterator.next().getMessage());
+        }
+
+        for (LogEntry log : logEntries) {
+            Allure.addAttachment("Лог браузера:", log.getMessage());
+        }
+        driver.quit();
+    }
+
 }
-//TODO сдлеать логирование понятным
-//TODO Добавить больше Assert
-//TODO По возможности создать отдельные классы с методами

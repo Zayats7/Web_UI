@@ -1,0 +1,6 @@
+#surefire_0
+#Thu Feb 10 12:06:01 MSK 2022
+basedir=/Users/alexei77/IdeaProjects/Web_UI
+junit.jupiter.extensions.autodetection.enabled=true
+user.dir=/Users/alexei77/IdeaProjects/Web_UI
+localRepository=/Users/alexei77/.m2/repository

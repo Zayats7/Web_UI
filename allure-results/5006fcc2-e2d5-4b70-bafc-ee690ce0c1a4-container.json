@@ -1,0 +1,1 @@
+{"uuid":"5006fcc2-e2d5-4b70-bafc-ee690ce0c1a4","name":"DragAndDropTest","children":["0ec70ddd-adba-416e-8a1d-9298fd6dc62e"],"befores":[{"name":"registerDriver","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1644303884804,"stop":1644303886060}],"afters":[],"start":1644303884787,"stop":1644303908081}

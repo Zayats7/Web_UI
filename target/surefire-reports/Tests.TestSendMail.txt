@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: Tests.TestSendMail
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 5.239 s <<< FAILURE! - in Tests.TestSendMail
+Tests.TestSendMail.testSentMessage  Time elapsed: 0.154 s  <<< ERROR!
+java.lang.IllegalArgumentException: Input must be set
+	at Tests.TestSendMail.testSentMessage(TestSendMail.java:55)
+
