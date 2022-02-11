@@ -4,17 +4,23 @@ import com.geekbrains.HomeWork.CustomLoggerNew;
 import com.geekbrains.HomeWork.LoginPage;
 import com.geekbrains.HomeWork.MainPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.logging.LogEntries;
+import org.openqa.selenium.logging.LogEntry;
+import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.support.events.EventFiringDecorator;
 
+import java.util.Iterator;
 import java.util.logging.Logger;
 
 /**
@@ -54,7 +60,7 @@ public class TestSendMail {
 
         LoginPage loginPage = new LoginPage(driver);
         LOGGER.info("Запускаем браузер");
-       // loginPage.start();
+        //loginPage.start();
         LOGGER.info("Логин");
         loginPage.doLogin();
         loginPage.doCheckBox();
@@ -82,8 +88,22 @@ public class TestSendMail {
         mainPage.sendMessageButton();
         Assert.assertTrue(mainPage.sendMessageLayer().isDisplayed());
 
-        loginPage.quiet();
+        //loginPage.quiet();
         LOGGER.warning("Письмо отправлено, тест пройден");
+    }
+    @AfterEach
+    void killDriver() {
+        LogEntries logEntries = driver.manage().logs().get(LogType.BROWSER);
+        Iterator<LogEntry> iterator = logEntries.iterator();
+
+        while (iterator.hasNext()) {
+            Allure.addAttachment("Лог браузера:", iterator.next().getMessage());
+        }
+
+        for (LogEntry log : logEntries) {
+            Allure.addAttachment("Лог браузера:", log.getMessage());
+        }
+        driver.quit();
     }
 
 }

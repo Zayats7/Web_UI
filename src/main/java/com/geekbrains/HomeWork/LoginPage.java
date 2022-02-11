@@ -41,20 +41,20 @@ public class LoginPage extends Base {
 //        driver.get(WEB_SITE);
 //    }
 
-    public void quiet() {
-
-        LogEntries logEntries = driver.manage().logs().get(LogType.BROWSER);
-        Iterator<LogEntry> iterator = logEntries.iterator();
-
-        while (iterator.hasNext()) {
-            Allure.addAttachment("Лог браузера:", iterator.next().getMessage());
-        }
-
-        for (LogEntry log : logEntries) {
-            Allure.addAttachment("Лог браузера:", log.getMessage());
-        }
-        driver.quit();
-    }
+//    public void quiet() {
+//
+//        LogEntries logEntries = driver.manage().logs().get(LogType.BROWSER);
+//        Iterator<LogEntry> iterator = logEntries.iterator();
+//
+//        while (iterator.hasNext()) {
+//            Allure.addAttachment("Лог браузера:", iterator.next().getMessage());
+//        }
+//
+//        for (LogEntry log : logEntries) {
+//            Allure.addAttachment("Лог браузера:", log.getMessage());
+//        }
+//        driver.quit();
+//    }
 
     public void doLogin() {
         LOGGER.warning("Находим поле для ввода почты");
